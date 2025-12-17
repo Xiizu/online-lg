@@ -1,0 +1,17 @@
+[
+    {
+        "nom": "Contaminé",
+        "description": "Vous avez été bléssé par une épée rouillée.",
+        "color": "#8B0000"
+    },
+    {
+        "nom": "Bénédiction",
+        "description": "Vous êtes protégé par une force divine.",
+        "color": "#FFFF00"
+    },
+    {
+        "nom": "Huilé",
+        "description": "Le pyromane vous a renversé un bidon entier d'essence.",
+        "color": "#FFA500"
+    }
+]
