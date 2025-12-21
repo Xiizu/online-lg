@@ -24,7 +24,7 @@
         {{-- Section ETATS --}}
         <div class="card mb-4">
             {{-- En-tête cliquable pour le collapse --}}
-            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center"
+            <div class="card-header bg-primary d-flex justify-content-between align-items-center"
                  data-bs-toggle="collapse"
                  data-bs-target="#collapseEtats"
                  aria-expanded="true"
@@ -39,7 +39,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover align-middle">
-                            <thead class="table-light">
+                            <thead class="">
                                 <tr>
                                     <th style="width: 30%">Label</th>
                                     <th style="width: 50%">Description</th>
@@ -49,7 +49,7 @@
                             </thead>
                             <tbody id="tbody-etats">
                                 {{-- Ligne de Création --}}
-                                <tr class="table-info">
+                                <tr class="">
                                     <td>
                                         <input type="text" id="new_label" class="form-control" placeholder="Nouveau label (ex: Paralysé)">
                                     </td>
@@ -99,7 +99,7 @@
         {{-- Section CAMPS --}}
         <div class="card mb-4">
             {{-- En-tête cliquable pour le collapse --}}
-            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center"
+            <div class="card-header bg-primary d-flex justify-content-between align-items-center"
                  data-bs-toggle="collapse"
                  data-bs-target="#collapseCamps"
                  aria-expanded="false"
@@ -114,7 +114,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover align-middle">
-                            <thead class="table-light">
+                            <thead class="">
                                 <tr>
                                     <th style="width: 40%">Nom</th>
                                     <th style="width: 40%">Couleur</th>
@@ -123,7 +123,7 @@
                             </thead>
                             <tbody id="tbody-camps">
                                 {{-- Ligne de Création Camp --}}
-                                <tr class="table-info">
+                                <tr class="">
                                     <td>
                                         <input type="text" id="new_camp_name" class="form-control" placeholder="Nouveau camp (ex: Village)">
                                     </td>
@@ -168,7 +168,7 @@
         {{-- Section ROLES --}}
         <div class="card mb-4">
             {{-- En-tête cliquable pour le collapse --}}
-            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center"
+            <div class="card-header bg-primary d-flex justify-content-between align-items-center"
                  data-bs-toggle="collapse"
                  data-bs-target="#collapseRoles"
                  aria-expanded="false"

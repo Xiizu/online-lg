@@ -1,5 +1,1029 @@
 [
     {
+        "nom": "Abominable Sectaire",
+        "camp": "Solitaire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque joueur reçoit une couleur. Tout le monde sait qui partage sa couleur. Si tous les joueurs d’une couleur sont morts alors qu’il est encore en vie, il gagne la partie.",
+        "description": "Fanatique des ténèbres, il impose sa loyauté par la couleur et traque ceux qui s’y opposent. Chaque élimination renforce son emprise et installe la terreur dans le village."
+    },
+    {
+        "nom": "Alchimiste",
+        "camp": "Village",
+        "aura": "Obscure",
+        "apparence": "Humaine",
+        "pouvoir": "Une fois dans la partie, il peut utiliser une potion pour tuer un joueur de son choix.",
+        "description": "Maître des fioles et des secrets anciens, l’Alchimiste manie des mixtures redoutables. Son savoir dangereux peut renverser le cours d'une nuit… ou sceller un destin."
+    },
+    {
+        "nom": "Analyste",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il connaît le nombre d’ennemis du village encore en vie.",
+        "description": "Froid et méthodique, l’Analyste observe les équilibres invisibles. Nuit après nuit, il mesure l’ampleur de la menace, offrant au village une vision claire de son déclin ou de son salut."
+    },
+    {
+        "nom": "Ancien",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il survit à la première attaque des Loups-Garous ou des Roux-Garous. Mais si les Villageois le lichen au vote il meurt instantanément.",
+        "description": "Vieillard aux secrets oubliés, il porte la mémoire du village. Les Loups-Garous peinent à le briser."
+    },
+    {
+        "nom": "Ange",
+        "camp": "Solitaire",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Si il est éliminé lors du premier vote, il remporte la partie immédiatement. Sinon il doit gagner avec le village.",
+        "description": "Innocent et pur au milieu des ténèbres, son existence seule peut inverser le destin du village. Sa disparition précoce change le cours du jeu."
+    },
+    {
+        "nom": "Anka",
+        "camp": "Village",
+        "aura": "Obscure",
+        "apparence": "Humaine",
+        "pouvoir": "Se comporte comme un Villageois, mais après sa mort, il peut voter pendant les deux tours suivants lors du vote du jour.",
+        "description": "Chasseur discret des Loups-Garous, il traque ses proies même après la tombe. Sa voix invisible peut influencer le destin du village malgré sa disparition."
+    },
+    {
+        "nom": "Aphrodite",
+        "camp": "Dieux",
+        "aura": "Lumineuse",
+        "apparence": "Divine",
+        "pouvoir": "À sa mort, lors de la nuit suivante, seuls les dieux se réveillent.",
+        "description": "Déesse de l’amour et des passions, Aphrodite bouleverse l’ordre établi jusque dans sa chute. Sa disparition plonge les mortels dans le silence, laissant une nuit entière aux seules divinités."
+    },
+    {
+        "nom": "Apprentie Assassin",
+        "camp": "Solitaire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Acquiert le pouvoir de l’Assassin si celui-ci est éliminé alors qu’elle a voté contre lui. Si l’Assassin n’est pas mort de cette façon, elle devient simple Villageois.",
+        "description": "Apprentie dans l’art du meurtre discret, elle guette les occasions et apprend des ombres. Son destin est lié à celui de son maître, dans la lumière ou dans la mort."
+    },
+    {
+        "nom": "Apprentie Détective",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il choisit deux joueurs lors de la première nuit et sait s’ils appartiennent au même camp ou non.",
+        "description": "Jeune enquêteur aux yeux perçants, il décèle les alliances et les mensonges. Ses premières observations guident le village dans l’ombre de la nuit."
+    },
+    {
+        "nom": "Apprentie Voyante",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Elle voit la première nuit le rôle d’un joueur de son choix.",
+        "description": "Une femme aux visions nocturnes, traquant les Loups-Garous cachés parmi les vivants."
+    },
+    {
+        "nom": "Asclépios",
+        "camp": "Dieux",
+        "aura": "Lumineuse",
+        "apparence": "Divine",
+        "pouvoir": "Une fois dans la partie, il peut ressusciter un dieu mort.",
+        "description": "Dieu de la guérison et des miracles, Asclépios défie l’inéluctable. Par son pouvoir sacré, il peut rappeler une divinité du royaume des morts… une seule fois."
+    },
+    {
+        "nom": "Assassin",
+        "camp": "Solitaire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Peut éliminer un joueur chaque nuit.",
+        "description": "Tueur silencieux dans l’ombre, il frappe sans prévenir. Chaque nuit, sa cible disparaît, semant la peur et le chaos parmi les habitants."
+    },
+    {
+        "nom": "Athéna",
+        "camp": "Dieux",
+        "aura": "Lumineuse",
+        "apparence": "Divine",
+        "pouvoir": "Chaque nuit, elle peut protéger un dieu de la mort. Elle ne peut pas protéger deux fois de suite le même dieu.",
+        "description": "Déesse de la sagesse et de la stratégie, Athéna veille sur les siens avec discernement. Sa protection divine détourne la mort, mais jamais sans limite ni répétition."
+    },
+    {
+        "nom": "Belette",
+        "camp": "Village",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Ne peut pas mourir de l’attaque d’un ennemi du village. Elle peut toutefois mourir du vote ou d’autres effets.",
+        "description": "Agile, vive et insaisissable, la Belette échappe toujours aux griffes des monstres qui rôdent. Sa petite taille et ses réflexes fulgurants font d’elle une cible presque impossible à attraper durant la nuit."
+    },
+    {
+        "nom": "Berger",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Possède deux moutons. Il peut en envoyer un temps qu’il en possède encore au moins un, chaque nuit chez un joueur. Si un mouton est envoyé chez un rôle qui possède une apparence de loup, il est dévoré, alors le Berger sera notifié de la mort de son mouton.",
+        "description": "Gardien des créatures du village, il observe silencieusement les Loups-Garous par le biais de ses moutons. Chaque perte renforce l’urgence de ses choix et la tension de la nuit."
+    },
+    {
+        "nom": "Bonne Sœur",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, elle apprend quels joueurs vont mourir. Une fois dans la partie, elle peut choisir de sauver un joueur.",
+        "description": "Protectrice bienveillante, la Bonne Sœur veille silencieusement sur le village. Guidée par ses visions, elle peut détourner une destinée funeste… mais une seule fois."
+    },
+    {
+        "nom": "Bouc Émissaire",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Si il y a égalité lors du vote, il meurt même si le vote ne le concerne pas Cependant, si il meurt de cette façon, il pourra décider des membres qui auront le droit de vote le jour suivant.",
+        "description": "Celui sur qui tombent les soupçons, il subit les choix du village. Même dans sa chute, son sort rappelle la fragilité des alliances et l’injustice des regards."
+    },
+    {
+        "nom": "Chaperon Rouge",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Tant que le Chasseur est en vie, elle ne peut pas être tuée par les Loups-Garous et les Roux-Garous.",
+        "description": "Jeune et audacieuse, elle arpente le village sous le voile de la nuit. Protégée par le Chasseur, ses pas silencieux peuvent démasquer les prédateurs tapis dans l’ombre."
+    },
+    {
+        "nom": "Chasseur",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "À sa mort, il peut éliminer le joueur de son choix.",
+        "description": "Solitaire aux réflexes affûtés, il garde sa dernière balle pour entraîner un ennemi avec lui dans la tombe… même si les Loups-Garous le prennent de court."
+    },
+    {
+        "nom": "Chasseur de Fantôme",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Il regarde le rôle d’un joueur lors des nuits 2 et 4. S’il découvre un rôle méchant, il rejoint le camp du méchant sauf s’il s’agit d’un rôle solitaire. Si il découvre un méchant à la nuit 2, il perd le pouvoir de regard pour la nuit 4.",
+        "description": "Traqueur des ombres et des secrets, il scrute les intentions des autres. Son destin peut basculer selon les vérités qu’il découvre dans la nuit."
+    },
+    {
+        "nom": "Chasseur de Secte",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Immunisé contre la secte. Chaque nuit, il cible un joueur : si celui-ci est membre de la secte, ce joueur meurt.",
+        "description": "Traqueur déterminé, il connaît les signes des fidèles occultes mieux que quiconque. Son regard perçant reconnais les mensonges et purge l’ombre des fanatiques."
+    },
+    {
+        "nom": "Chasseur de Tête",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Doit éliminer au vote une cible choisie aléatoirement en début de partie. S’il réussit, il devient immunisé contre l’attaque des Loups-Garous et des Roux-Garous. Il doit maintenant gagner seul. C'est-à- dire rester face à deux joueurs ou moins. Si sa cible meurt autrement, il reste un Villageois.",
+        "description": "Tireur calculateur et tenace, il traque sa proie désignée avec détermination. Sa survie et sa victoire dépendent de sa capacité à accomplir sa mission dans l’ombre."
+    },
+    {
+        "nom": "Chef Anglais",
+        "camp": "Soldats Anglais",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "À sa mort, il peut emporter avec lui n’importe quel joueur de son choix. Il collabore avec les Soldats Anglais.",
+        "description": "Leader stratégique et impitoyable, le Chef Anglais ne tombe jamais seul. Même dans la mort, il frappe avec précision, entraînant un ennemi dans sa chute."
+    },
+    {
+        "nom": "Chevalier à l'Épée Rouillée",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Si un Loup-Garou l’attaque, il meurt… mais le Loup-Garou le plus proche de lui à sa droite meurt aussi.",
+        "description": "Vétéran oublié, armé d’une épée corrodée par le temps. Son arme est faible… mais chargée d'une malédiction assez sombre pour entraîner un Loup-Garou avec lui dans la tombe."
+    },
+    {
+        "nom": "Chien-Loup",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Au début du jeu, il choisit de rester fidèle au Village… ou de rejoindre les Loups-Garous.",
+        "description": "Créature au cœur divisé, oscillant entre loyauté et instinct bestial. Une seule décision suffit pour sceller son destin… et celui du village."
+    },
+    {
+        "nom": "Colombe",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque jour, elle protège un joueur du vote du bûcher. Elle ne peut pas protéger deux fois de suite le même joueur.",
+        "description": "Pacifique et attentionnée, la Colombe veille sur les innocents avec vigilance. Son rôle discret mais crucial permet de sauver des vies au moment critique du vote."
+    },
+    {
+        "nom": "Comédien",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Possède trois rôles au début de la partie et peut se faire passer pour l’un d’eux à tout moment, mais une seule fois par rôle. Il utilisera les pouvoir du rôle durant le tour.",
+        "description": "Maître du masque et du mensonge, il manipule les apparences pour protéger le village… ou détourner les soupçons des Loups-Garous."
+    },
+    {
+        "nom": "Compatriote",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Reçoit au début de la partie le nom d’un Villageois. Si ce Villageois meurt, il reçoit immédiatement le nom d’un autre Villageois encore en vie, et ainsi de suite jusqu’à ce qu’il n’en reste plus.",
+        "description": "Toujours en lien avec les siens, le Compatriote ressent instinctivement l’aura des véritables Villageois. À chaque perte, un nouveau fil se tisse, lui permettant de suivre les derniers piliers de l’innocence."
+    },
+    {
+        "nom": "Comploteuse",
+        "camp": "Solitaire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Marque un joueur comme traître qui devra maintenant gagner avec elle. Elle possède un pouvoir unique de tuer un joueur à tout moment en se révélant. Gagne seule si elle reste seule contre un autre joueur, ou avec son complice et un autre joueur. Si elle meurt, son complice conserve son camp initial. Son complice connaît son identité.",
+        "description": "Maîtresse des manipulations et des trahisons, elle transforme ses alliés en complices. Sa ruse et ses choix stratégiques déterminent l’issue de la partie."
+    },
+    {
+        "nom": "Comte",
+        "camp": "Vampire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, peut effrayer un joueur qui ne se réveillera pas et ne pourra pas utiliser son pouvoir. Gagne avec les Vampires.",
+        "description": "Seigneur des ténèbres, il sème la peur et contrôle les nuits. Chaque souffle de terreur renforce son camp et affaiblit les autres."
+    },
+    {
+        "nom": "Conservateur",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Une seule fois dans la partie, il peut donner l’effet conserviste à un joueur : il change aléatoirement son camp (si Loup → Solo, si Solo → Village, si Village → Loup) ou il ne se passe rien (une chance sur deux).",
+        "description": "Gardien des traditions, il manipule subtilement les allégeances. Son influence peut semer le chaos ou rétablir l’équilibre, selon la volonté du destin."
+    },
+    {
+        "nom": "Corbeau",
+        "camp": "Village",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Chaque nuit, il désigne un joueur qui recevra un vote supplémentaire pour le lendemain qui sera connu de tous.",
+        "description": "Ombre silencieuse et messager de présages sombres, il influence le destin des habitants depuis les toits. Ses choix nocturnes peuvent changer l’issue des votes du village."
+    },
+    {
+        "nom": "Cupidon",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Au début de la partie, il désigne deux joueurs qui deviennent Amoureux. Si l’un meurt, l’autre meurt immédiatement de chagrin.",
+        "description": "Archer aux flèches enchantées, il lie deux âmes pour le meilleur… ou pour les condamner ensemble lorsque les Loups-Garous frappent."
+    },
+    {
+        "nom": "Détective",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il choisit deux joueurs à identifier et sait s’ils appartiennent au même camp ou non.",
+        "description": "Maître enquêteur, il scrute les alliances et les secrets. Ses observations nocturnes éclairent le village et révèlent les vérités cachées dans l’ombre."
+    },
+    {
+        "nom": "Devin Maléfique",
+        "camp": "Solitaire",
+        "aura": "Obscure",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il peut tenter de deviner à qui appartient un rôle spécifique décidé aléatoirement. S’il réussit, le joueur ciblé meurt immédiatement, même s’il est protégé.",
+        "description": "Maître des présages funestes, le Devin Maléfique manipule les secrets et la destinée. Chaque intuition exacte scelle le sort d’un joueur, répandant la terreur dans le village."
+    },
+    {
+        "nom": "Dictateur",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Il peut révéler son rôle à tout moment de la journée. Dès qu’il le fait, si le Maire est méchant, le Dictateur devient Maire et l’ancien Maire meurt; si le Maire fait partie du camp du village, les deux meurent.",
+        "description": "Seigneur de l’ombre et de la manipulation, il tire les ficelles du village à sa guise. Sa révélation bouleverse l’ordre établi et peut sceller le destin du Maire et du village."
+    },
+    {
+        "nom": "Diseuse de Bonne Aventure",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "La deuxième nuit, elle recevra la liste de tous les joueurs qui ont utilisé un pouvoir.",
+        "description": "Mystique et perspicace, elle lit les signes de la nuit. Son intuition révèle les actions cachées et guide le village dans l’ombre des secrets."
+    },
+    {
+        "nom": "Divinateur",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Une fois dans la partie, révèle le rôle d’un joueur à tout le monde.",
+        "description": "Voyant clairvoyant et intrépide, il dévoile la vérité cachée derrière les masques. Ses révélations influencent les décisions et la confiance au sein du village."
+    },
+    {
+        "nom": "Doppelganger",
+        "camp": "Solitaire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Il copie le rôle d’un joueur jusqu’à la fin de la partie. Pour le joueur ciblé il ne se passe rien. Pour l’ancien Doppelganger, il récupère les pouvoirs du rôle et doit maintenant gagner avec ce camp. Si il copie un rôle solitaire alors il doit gagner seul.",
+        "description": "Maître des imitations, il prend l’apparence et les capacités d’autrui. Sa duplicité peut changer l’équilibre des forces et semer la confusion au village."
+    },
+    {
+        "nom": "Éducateur",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Tant qu’il est en vie, l’Enfant Sauvage ne peut pas se transformer en Loup-Garou, même si son modèle meurt.",
+        "description": "Gardien bienveillant mais strict, l’Éducateur garde un œil vigilant sur l’Enfant Sauvage. Sa présence rassurante et son autorité naturelle retiennent les pulsions bestiales qui sommeillent en lui."
+    },
+    {
+        "nom": "Empathique",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il découvre aléatoirement l’identité d’un joueur humain encore en vie.",
+        "description": "Doté d’un instinct presque surnaturel, l’Empathique perçoit les intentions des autres sans même avoir à les observer. Son esprit capte les vibrations de ceux qui n’ont rien de bestial, lui révélant chaque nuit un allié potentiel."
+    },
+    {
+        "nom": "Enfant Sauvage",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Choisit un modèle au début de la partie. Si cette personne meurt, il devient Loup-Garou.",
+        "description": "Orphelin guidé par son attachement, il observe et apprend. La disparition de sa figure de référence transforme son innocence en fureur nocturne."
+    },
+    {
+        "nom": "Évêque",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il possède deux pieux qu’il peut lancer sur un joueur. Si la personne visée est un Vampire, elle est éliminée.",
+        "description": "Protecteur sacré, il traque les créatures de la nuit avec ses armes bénies. Chaque pieu lancé est un jugement divin contre les ténèbres."
+    },
+    {
+        "nom": "Faux Juge",
+        "camp": "Solitaire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il peut emprisonner un joueur supplémentaire, le privant d’agir durant la nuit. Lorsque tous les joueurs encore en vie ont été emprisonnés, la partie se termine immédiatement et il remporte la victoire.",
+        "description": "Usurpateur de justice, il avance dans l’ombre pour imposer son propre ordre. À force d’enchaîner les innocents comme les coupables, il étouffe progressivement le village dans une justice pervertie jusqu’à régner seul."
+    },
+    {
+        "nom": "Fossoyeur",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "À sa mort, il choisit un joueur et le maître du jeu choisit un joueur du camp opposé. Si le Fossoyeur désigne un méchant, l’autre nom annoncé sera un innocent et inversement. Le maître du jeu annoncera : Il y a un Villageois et un méchant entre (nom1) et (nom2).",
+        "description": "Gardien des tombes et des secrets, sa dernière action dévoile des vérités surprenantes. Même dans la mort, il influence le destin du village et des Loups."
+    },
+    {
+        "nom": "Fou",
+        "camp": "Solitaire",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Son objectif est de se faire éliminer lors d’un vote pour gagner la partie.",
+        "description": "Esprit chaotique et imprévisible, il joue avec les regards et les soupçons. Sa seule victoire est de tomber aux mains du village, semant confusion et rire noir."
+    },
+    {
+        "nom": "Frères",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "La première nuit, les trois Frères se réveillent ensemble et se reconnaissent. Chaque nuit, ils se réveillent pour se concerter.",
+        "description": "Liés par un lien secret et mystérieux, ils s’échangent conseils et stratégies dans l’ombre. Leur cohésion silencieuse renforce le village face aux ténèbres."
+    },
+    {
+        "nom": "Frère Loup",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Il agit exactement comme l’un des trois Frères : il se réveille avec eux et est perçu comme tel. En réalité, il est Loup-Garou.",
+        "description": "Déguisé sous les traits d’un frère de confiance, il partage leurs gestes et leurs silences. Derrière cette fraternité trompeuse se cache un prédateur prêt à trahir au moment opportun."
+    },
+    {
+        "nom": "Fumeur",
+        "camp": "Loup-Garou",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Lors de la première attaque des Loups-Garous le visant, il survit et tue un Loup à la place. Il connaît tous les Loups, mais eux ne le connaissent pas. Il doit gagner avec eux.",
+        "description": "Discret et rusé, le Fumeur se joue de sa propre meute. Son premier souffle de rébellion bouleverse les plans nocturnes, semant la confusion parmi ceux qu’il doit pourtant aider à triompher."
+    },
+    {
+        "nom": "Garde",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il peut protéger un joueur contre l’attaque des Loups-Garous et des Roux-Garous, mais il ne peut pas se protéger lui-même.",
+        "description": "Bouclier silencieux du village, il se dresse entre la proie et le prédateur. Son courage discret peut sauver des vies… ou être insuffisant face à la meute."
+    },
+    {
+        "nom": "Garde du Corps",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Peut protéger un joueur désigné contre l’élimination lors du vote de jour, mais il ne peut pas se protéger lui-même.",
+        "description": "Sentinelle dévouée, il se place entre le danger et sa cible. Sa vigilance défend les innocents et perturbe les plans des ténèbres."
+    },
+    {
+        "nom": "Gourou",
+        "camp": "Secte",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il peut enrôler un joueur. Les joueurs enrôlés sont avec la secte. Ils gagnent lorsque tous les joueurs rejoignent la secte. Si le Gourou meurt, sa secte se dissout et toutes les personnes enrôlées meurent avec lui.",
+        "description": "Leader charismatique et manipulateur, il transforme le village en une armée de fidèles. Sa survie est cruciale pour que sa vision s’accomplisse."
+    },
+    {
+        "nom": "Grand Méchant Loup",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Chaque nuit, il participe à l’attaque des loups mais peut aussi tuer un joueur en plus si tous les autres Loups et les rôles qui peuvent l'être sont encore en vie.",
+        "description": "Seigneur des ténèbres nocturnes, il guide sa meute avec cruauté. Sa faim insatiable fait trembler le village, et chaque lune est témoin de sa sauvagerie."
+    },
+    {
+        "nom": "Grand-Mère Grincheuse",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, elle peut empêcher un joueur de voter le jour suivant.",
+        "description": "Ancienne aux habitudes acérées, elle veille sur le village avec sévérité. Sa présence cloue les Villageois et brouille les décisions lors des votes."
+    },
+    {
+        "nom": "Greffier",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Une fois dans la partie, il peut demander qui a voté pour l’élimination du jour précédent et connaître combien d'ennemis du village ont voté pour cette élimination.",
+        "description": "Archiviste de la nuit et des voix, le Greffier traque les intentions derrière chaque vote. Son œil attentif révèle les conspirations et éclaire la vérité cachée derrière les urnes."
+    },
+    {
+        "nom": "Héra",
+        "camp": "Dieux",
+        "aura": "Lumineuse",
+        "apparence": "Divine",
+        "pouvoir": "À sa mort, elle élimine un joueur avec elle et empêche un autre joueur de se réveiller lors de la nuit suivante.",
+        "description": "Reine des dieux, fière et implacable, Héra ne quitte jamais ce monde sans imposer sa volonté. Même déchue, son courroux divin frappe et impose le silence aux nuits suivantes."
+    },
+    {
+        "nom": "Héritier",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Il désigne un joueur en début de partie. Si le joueur qu’il a désigné meurt alors qu’il s'agissait d’un Villageois, il hérite de ses pouvoirs pour le reste de la partie. Les pouvoirs à usage unique se régénèrent.",
+        "description": "Portant le poids du destin d’un autre, il attend dans l’ombre son heure. Chaque mort peut renforcer sa position et influencer le cours de la nuit."
+    },
+    {
+        "nom": "Homme-Loup",
+        "camp": "Loup-Garou",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il est perçu comme un Villageois par les rôles a informations, bien qu’il soit Loup-Garou.",
+        "description": "Créature des ténèbres dissimulée sous une apparence innocente, il infiltre le village et manipule les habitants sans éveiller les soupçons."
+    },
+    {
+        "nom": "Hyène",
+        "camp": "Solitaire",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Elle se réveille avec les Loups-Garous, les Loups-Roux et les Vampires mais doit gagner seule. Quand tous les Loups-Garous ou les Loups-Roux sont morts, elle récupère leur pouvoir de tuer. Elle peut récupérer le pouvoir des deux meutes si elle est la dernière en vie.",
+        "description": "Prédatrice rusée et indépendante, la Hyène observe toutes les meutes et se joue des alliances. Sa patience et sa stratégie nocturne font d’elle une menace invisible pour tous."
+    },
+    {
+        "nom": "Idiot du Village",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "S’il est condamné par le vote, il révèle son rôle et survit.",
+        "description": "Âme naïve et maladroite, souvent moquée… mais protégée par un étrange destin."
+    },
+    {
+        "nom": "Infect Père des Loups",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Un fois dans la partie,il peut infecter le joueur dévoré par sa meute, le transformant en Loup-Garou.",
+        "description": "Maître de la corruption, il étend sa malédiction silencieusement. Chaque souffle qu’il porte peut arracher une âme au village et l’entraîner dans la meute nocturne."
+    },
+    {
+        "nom": "Insondable",
+        "camp": "Village",
+        "aura": "Brouillée",
+        "apparence": "Brouillée",
+        "pouvoir": "Toutes les informations sur lui sont brouillées pour les rôles à information.",
+        "description": "Mystérieux et insaisissable, l’Insondable glisse dans l’ombre des nuits, ses intentions dissimulées même aux yeux les plus perspicaces. Aucune vision ne peut percer son secret."
+    },
+    {
+        "nom": "Insoucieux",
+        "camp": "Solitaire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il peut choisir entre se protéger, éliminer un joueur, ou découvrir l’identité d’un joueur. Il doit être le dernier en vie pour gagner.",
+        "description": "Libre et imprévisible, l’Insoucieux suit ses envies sans contrainte. Sa capacité à changer d’action chaque nuit le rend dangereux et difficile à anticiper."
+    },
+    {
+        "nom": "Jeune Loup",
+        "camp": "Loup-Garou",
+        "aura": "Neutre",
+        "apparence": "Bête",
+        "pouvoir": "À sa mort, peut éliminer un joueur de son choix.",
+        "description": "Prédateur en devenir, sa dernière vengeance laisse une trace sanglante. Même dans la mort, il influence la nuit et le destin des survivants."
+    },
+    {
+        "nom": "Joueur de Flûte",
+        "camp": "Solitaire",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il charme deux joueurs. Quand tous les joueurs sont charmés, il remporte la partie. Les joueurs sont avertis et se connaissent au fur et à mesure. Ils peuvent petit à petit refermer les recherches sur le Joueur de Flûte qui ne peut pas se charmer lui-même.",
+        "description": "Mélodie envoûtante dans l’obscurité du village, il attire les âmes égarées vers son destin, silencieusement, comme une ombre qui glisse parmi les Loups-Garous."
+    },
+    {
+        "nom": "Juge-Bègue",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Une fois par partie, il peut décider, la nuit qui succède, de déclencher un nouveau vote immédiatement après le premier.",
+        "description": "Gardien silencieux de la justice, il agit par signes mystérieux. Son intervention peut bouleverser les votes et décider du sort des habitants sans que personne ne s’y attende."
+    },
+    {
+        "nom": "Jumeaux",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Deux joueurs sont jumeaux et se connaissent. À tour de rôle, ils deviennent le camp d’un joueur à côté de leur jumeau de manière aléatoire.",
+        "description": "Liés par un lien mystérieux, ils partagent stratégies et secrets. Leur influence change constamment le cours des alliances et des conflits dans le village."
+    },
+    {
+        "nom": "La Chose",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Bête",
+        "pouvoir": "Informe l’un de ses voisins aléatoirement qu’il est La Chose. Le voisin ne saura pas s’il s’agit du joueur à sa droite ou à sa gauche.",
+        "description": "Entité mystérieuse et insaisissable, elle sème le doute et l’incertitude. Ses révélations fragmentaires perturbent les alliances et les stratégies autour d’elle."
+    },
+    {
+        "nom": "Loup Alpha",
+        "camp": "Loup-Garou",
+        "aura": "Neutre",
+        "apparence": "Bête",
+        "pouvoir": "Leader des Loups-Garous. En cas de désaccord les autres Loups suivent ses choix lors des attaques nocturnes.",
+        "description": "Chef imposant et redouté, il guide la meute dans l’ombre. Sa stratégie et son autorité déterminent la survie et la puissance de sa meute."
+    },
+    {
+        "nom": "Loup Amnésique",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Sait qu’il est Loup-Garou mais doit être attaqué par les Loups pour les rejoindre. Connaît les autres Loups mais ils ne le connaissent pas jusqu’à ce qu’il se réveille.",
+        "description": "Errant entre mémoire et identité, il cherche sa place parmi les ténèbres. Sa loyauté dépend de la reconnaissance de ses pairs, dans l’ombre des forêts."
+    },
+    {
+        "nom": "Loup Anonyme",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Choisit un rôle et devient ce rôle uniquement aux yeux des rôles à information. Il change de nom, d’aura et d’apparence.",
+        "description": "Créature discrète et rusée, il se dissimule derrière un masque trompeur. Seuls ceux qui scrutent les vérités cachées sont dupés par son identité."
+    },
+    {
+        "nom": "Loup Berserk",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Il ne peut pas mourir des pouvoirs du village, seulement du vote.",
+        "description": "Furie sauvage des ténèbres, il ignore les protections et les pièges. Seule la force brute ou les siens peuvent l’arrêter dans sa traque nocturne."
+    },
+    {
+        "nom": "Loup Blanc",
+        "camp": "Solitaire",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Une nuit sur deux, il peut tuer un Loup-Garou, trahissant discrètement sa propre meute. Il doit être le dernier survivant pour gagner.",
+        "description": "Prédateur solitaire, plus cruel encore que les siens. Sous sa fourrure pâle, il cache une ambition glaciale : éliminer Villageois et Loup-Garou pour régner seul."
+    },
+    {
+        "nom": "Loup Brouilleur",
+        "camp": "Loup-Garou",
+        "aura": "Brouillée",
+        "apparence": "Brouillée",
+        "pouvoir": "Chaque nuit, il se réveille une seconde fois pour brouiller l'apparence d’un joueur. Ce joueur voit son apparence masquée : un rôle à information le verra brouillée au lieu de son aura ou de son apparence et ce jusqu'à la fin de la partie.",
+        "description": "Maître des illusions nocturnes, il altère les perceptions du village. Là où il passe, les identités s’effacent, semant la confusion et offrant une couverture parfaite à sa meute."
+    },
+    {
+        "nom": "Loup Cauchemar",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Trois fois dans la partie, il peut effrayer un joueur, empêchant celui-ci de se réveiller pendant une nuit.",
+        "description": "Créature des ombres, il hante les esprits et fige ses proies dans la peur. Trois cauchemars suffisent pour semer le chaos et la désorganisation au village."
+    },
+    {
+        "nom": "Loup Divin",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Divine",
+        "pouvoir": "Une fois dans la partie, il choisit un rôle qui sera affiché à tous les rôles de voyance. Quel que soit le joueur sondé, pendant une nuit et un jour. Il change également l’aura et l’apparence durant l’activation de son pouvoir.",
+        "description": "Manipulateur des perceptions et maître des tromperies, le Loup Divin altère la réalité aux yeux des voyants, semant le doute et la désinformation dans le village."
+    },
+    {
+        "nom": "Loup Feutré",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Chaque nuit, il reçoit un rôle aléatoire parmi les joueurs encore en vie. Il fait croire aux rôles à information qu’il possède le rôle, l'aura et l’apparence du rôle qu'il reçoit. Ce rôle peut être n’importe quel rôle Villageois ou Solitaire.",
+        "description": "Maître du déguisement et de la tromperie, il brouille les perceptions et manipule les enquêtes. Son identité changeante rend sa traque insaisissable."
+    },
+    {
+        "nom": "Loup-Garou",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Chaque nuit, il se réunit avec sa meute pour choisir une victime à dévorer.",
+        "description": "Créature nocturne à l’âme déchirée, il cache son visage humain le jour pour mieux déchirer la chair des Villageois lorsque la lune l’appelle."
+    },
+    {
+        "nom": "Loup Jumeaux",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Deux Loups-Garous simples liés. Si l’un meurt, l’autre cesse de se réveiller la nuit et apparaît comme humain face aux rôles à information. Il récupère sa faculté de loup si c’est le dernier loup encore en vie.",
+        "description": "Deux âmes liées par le sang et la meute, leur destin est entrelacé. La chute de l’un voile temporairement l’autre, mais quand il ne reste plus qu’un seul prédateur, sa nature rejaillit dans toute sa force."
+    },
+    {
+        "nom": "Loup Menteur",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "À sa mort, il peut choisir quel rôle sera affiché à sa place, trompant ainsi les joueurs restants.",
+        "description": "Manipulateur et rusé, le Loup Menteur joue avec les perceptions des vivants. Même dans la mort, il sème le doute et la confusion parmi ceux qui l’entourent."
+    },
+    {
+        "nom": "Loup Mystique",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Chaque fois qu’un Loup-Garou meurt, il découvre le rôle d’un joueur non-Loup.",
+        "description": "Maîtres des secrets et de l’obscurité, ils exploitent la disparition de leurs pairs pour percer les mystères des vivants et renforcer leur domination nocturne."
+    },
+    {
+        "nom": "Loup Infiltré",
+        "camp": "Roux-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Loup-Garou particulier qui se réveille avec les Loups-Garous et également avec les Roux-Garous. Il appartient pourtant aux camps des Roux-Garous. Il doit donc trahir les Loups-Garous",
+        "description": "Créature tapie entre deux meutes, il glisse dans les ténèbres avec une double allégeance. Sa présence silencieuse renforce les loups et brouille les certitudes."
+    },
+    {
+        "nom": "Loup Intelligent",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Il connaît le rôle exact du joueur ciblés par les Loups-Garous chaque nuit.",
+        "description": "Calculateur et stratège, le Loup Intelligent déchiffre les secrets de la meute. Sa clairvoyance lui permet de guider les attaques et de maximiser l’efficacité de chaque nuit."
+    },
+    {
+        "nom": "Loup Kamikaze",
+        "camp": "Loup-Garou",
+        "aura": "Neutre",
+        "apparence": "Bête",
+        "pouvoir": "À sa mort, il élimine le joueur à sa gauche et à sa droite.",
+        "description": "Féroce et imprévisible, il emporte avec lui les innocents et les ennemis dans sa chute. Sa mort est une tempête qui frappe tous ceux qui l’entourent."
+    },
+    {
+        "nom": "Loup Rêveur",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Il ne connaît pas les autres Loups-Garous et n’est pas connu d’eux. Il n’a pas le droit de voter avec les autres Loups-Garous. Si il est le seul Loup survivant, il devient un Loup-Garou classique.",
+        "description": "Solitaire et mystérieux, il erre dans la nuit sans repères. Sa transformation finale lui confère la pleine puissance de la meute lorsqu’il reste seul."
+    },
+    {
+        "nom": "Loup Ténébreux",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Une fois dans la partie, il peut dissimuler le rôle d’un joueur mort lors d’un vote, trompant ainsi les autres joueurs.",
+        "description": "Maître des ombres et des illusions, le Loup Ténébreux brouille la vérité et manipule les perceptions. Son acte peut semer la confusion et retarder la justice du village."
+    },
+    {
+        "nom": "Loup Voleur d'Orange",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Tant que le Loup Voleur d'Orange est en vie, les joueurs savent qu’une orange a été volée.",
+        "description": "Rusé et provocateur, le Loup Voleur d'Orange laisse un indice visible de son larcin. Même dévoilé, son méfait continue de semer le doute et détourner les soupçons."
+    },
+    {
+        "nom": "Loup Voyant",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Chaque nuit, elle regarde un rôle.",
+        "description": "Au cœur des ténèbres, il scrute le village pour débusquer ses proies. Sa clairvoyance fait des Loups-Garous des prédateurs encore plus redoutables."
+    },
+    {
+        "nom": "Louveteau",
+        "camp": "Loup-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "À sa mort, les Loups-Garous peuvent éliminer une deuxième personne lors de la nuit suivante.",
+        "description": "Jeune et impétueux, le Louveteau ne connaît pas la peur. Même dans la mort, son esprit guerrier souffle la force supplémentaire à sa meute pour frapper encore."
+    },
+    {
+        "nom": "Lycan",
+        "camp": "Village",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Il est perçu comme un Loup-Garou, bien qu’il soit Villageois.",
+        "description": "Habitant maudit par l’apparence trompeuse, il cache sa véritable nature. Entre suspicion et vérité, il doit naviguer prudemment pour sauver le village."
+    },
+    {
+        "nom": "Mentaliste",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Il peut connaître l’apparence de la deuxième personne ayant reçu le plus de votes lors du bûcher de la veille.",
+        "description": "Maître des pensées et des intentions, il scrute les signes et indices pour révéler les secrets du village. Chaque révélation éclaire l’ombre qui plane sur la communauté."
+    },
+    {
+        "nom": "Montreur d’Ours",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque matin, si un Loup-Garou se trouve à sa gauche ou à sa droite, le maître du jeu indique à tous les joueurs que l’ours grogne, révélant la présence d’un loup à proximité.",
+        "description": "Ses instincts et son compagnon imposant détectent la menace qui rôde. Le grognement de l’ours avertit le village des prédateurs tapis dans l’ombre."
+    },
+    {
+        "nom": "Nécromancien",
+        "camp": "Village",
+        "aura": "Obscure",
+        "apparence": "Humaine",
+        "pouvoir": "Il connaît le rôle exact des morts.",
+        "description": "Maître des âmes disparues, il scrute les secrets des morts pour guider ses actions. Chaque révélation renforce sa connaissance et son pouvoir dans l’ombre du village."
+    },
+    {
+        "nom": "Noiseuse",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Elle échange les rôles de deux joueurs lors de sa première action et apprend quels rôles ont été échangés, sans savoir quel rôle appartient à qui.",
+        "description": "Maîtresse du chaos et des illusions, elle manipule les identités et les alliances. Son intervention brouille les cartes et transforme le cours du jeu dès le départ."
+    },
+    {
+        "nom": "Pestiféré",
+        "camp": "Village",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Si elle meurt lors d’un vote, elle emporte avec elle le premier joueur qui a voté pour sa mort.",
+        "description": "Malchanceux et redouté, sa mort entraîne vengeance immédiate. Sa présence inspire méfiance et peur, car ses choix finissent toujours par frapper les autres."
+    },
+    {
+        "nom": "Pickpocket",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Il peut utiliser le pouvoir d’un joueur ciblé tout en laissant ce joueur conserver le sien. Il peut utiliser sa capacité deux fois maximum. Si la cible n’est pas du Village, ou que la cible a un pouvoir passif, il ne reçoit rien.",
+        "description": "Maître des subtilités et des secrets, il s’empare des capacités d’autrui pour surprendre et renverser les situations. Chaque usage est un vol calculé dans l’ombre."
+    },
+    {
+        "nom": "Plaignante",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Une fois dans la partie, elle apprend l’identité exacte d’un joueur qu’elle a voté pour l’élimination.",
+        "description": "Curieuse et déterminée, la Plaignante utilise son vote comme une arme de connaissance. Un seul geste suffit pour révéler les secrets des autres, orientant le village vers la vérité."
+    },
+    {
+        "nom": "Président",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Villageois simple qui commence automatiquement maire.",
+        "description": "Figure d’autorité incontestée, son statut éclaire le village d’une confiance rare. Protégé par son titre, il mène les débats tandis que l’ombre rôde autour de lui."
+    },
+    {
+        "nom": "Prêtre",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il est immunisé contre la morsure des Vampires. Chaque nuit, il peut bénir un joueur pour empêcher sa transformation s’il est mordu. Le joueur bénit pourra toutefois être mordu à nouveau.",
+        "description": "Protecteur sacré et vigilant, il veille sur les âmes menacées par les ténèbres. Sa bénédiction est un rempart contre la malédiction des vampires."
+    },
+    {
+        "nom": "Prince",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Les 3 premiers jours et les 3 premières nuits, il ne peut pas mourir.",
+        "description": "Guerrier d’honneur drapé dans le silence. Il n’agit pas la nuit, mais peut lever son blason pour sauver sa peau ou guider les vivants face aux Loups-Garous."
+    },
+    {
+        "nom": "Pronostiqueur",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il peut voir l’apparence d’un joueur, mais peut recevoir l’information inversée. Si c’est le cas, toutes ses informations seront inversées pour le reste de la partie. A lui de comprendre si c’est pronostique son juste ou non.",
+        "description": "Mystique et incertain, il scrute l’avenir mais ses visions peuvent être trompeuses. Ses prédictions influencent les choix du village, pour le meilleur ou pour le pire."
+    },
+    {
+        "nom": "Pyromane",
+        "camp": "Solitaire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il peut choisir soit de mettre de l’essence sur deux joueurs, soit de brûler tous les joueurs déjà imbibés d’essence. Il ne peut pas être dévoré par les Loup-Garous et les Roux-Garous. Il gagne si il est le dernier survivant.",
+        "description": "Maître du feu et de la destruction, il répand ses flammes silencieusement dans le village. Chaque décision nocturne rapproche le village de la ruine ou du chaos."
+    },
+    {
+        "nom": "Renard",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Bête",
+        "pouvoir": "Chaque nuit, il renifle un joueur et ses deux voisins. S’il découvre un trio d’aura lumineuse, il perd son pouvoir. Sinon, il apprend qu’au moins un joueur parmi les trois a une aura obscure, et peut continuer à renifler la nuit suivante.",
+        "description": "Ses sens aiguisés détectent le mal caché parmi les habitants. Chaque nuit, il traque les secrets pour protéger le village des Loups-Garous."
+    },
+    {
+        "nom": "Renard Mystérieux",
+        "camp": "Solitaire",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Elle ne peut pas mourir la nuit sauf si elle est espionnée. Si c’est le cas alors elle meurt instantanément. Elle gagne si seuls deux autres joueurs sont encore en vie.",
+        "description": "Insaisissable et prudent, le Renard Mystérieux se faufile entre les joueurs. Sa survie dépend de sa discrétion totale, et sa victoire ne peut être atteinte qu’avec habileté et patience."
+    },
+    {
+        "nom": "Renard Polaire",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Bête",
+        "pouvoir": "Chaque nuit, il désigne un nombre de joueurs égal au nombre de joueurs ayant une apparence de loup plus un dans la composition. Le MJ lui révèle aléatoirement un joueur humain parmi ceux qu’il a désignés. À chaque fois qu’un joueur ayant une apparence de loup meurt et que sa carte est révélée, le nombre de joueurs que le Renard Polaire peut désigner chaque nuit diminue de un.",
+        "description": "Créature sensible aux auras, le Renard Polaire perçoit instinctivement la chaleur humaine sous la neige. Plus les faux loups tombent, plus son flair se concentre, le guidant avec précision vers les innocents au cœur du blizzard."
+    },
+    {
+        "nom": "Renfield",
+        "camp": "Vampire",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il connaît l’identité des Vampires mais pas réciproquement. Il doit œuvrer pour leur victoire.",
+        "description": "Serviteur silencieux des ténèbres, il aide les créatures de la nuit sans jamais révéler sa loyauté. Son intelligence et sa discrétion font de lui un allié redoutable."
+    },
+    {
+        "nom": "Rival",
+        "camp": "Solitaire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Il connaît le Cupidon et possède une flèche pour tuer un des amoureux. S' il se trompe, il meurt et la cible survit. Si il réussit, le joueur visé meurt et il découvre l’identité de l’autre membre du couple, avec lequel le Rival est maintenant lié. Si le couple meurt avant qu’il réussisse à en éliminer un avec son pouvoir, il les suit dans la mort.",
+        "description": "Machinateur et jaloux, il manipule le cœur et le destin des amoureux. Ses choix déterminent qui survivra et qui tombera dans l’ombre."
+    },
+    {
+        "nom": "Roux-Garou",
+        "camp": "Roux-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Membre d’une meute distincte de Loups-Garous. Il se réveille avec les autres Roux-Garous et ensemble il élimine un joueur. Ils ne peuvent pas éliminer les Loups-Garous durant la nuit.",
+        "description": "Bête rousse aux yeux brûlants, il rôde à la lisière des clans. Sa meute agit dans l’ombre, indépendante et imprévisible, semant la confusion parmi les créatures nocturnes."
+    },
+    {
+        "nom": "Roux-Roux",
+        "camp": "Roux-Garou",
+        "aura": "Obscure",
+        "apparence": "Bête",
+        "pouvoir": "Si il ne reste qu’un seul membre dans la meute des Loups-Garous et que le Roux-Roux est encore en vie, alors ce Loup rejoint automatiquement la meute des Roux-Garous et gagne avec eux.",
+        "description": "Téméraire et influent, le Roux-Roux manipule subtilement la meute. Sa présence peut rallier un Loup-Garou isolé à son camp, changeant le destin de la nuit."
+    },
+    {
+        "nom": "Salvateur",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il protège un joueur contre les Loups-Garous. Il ne peut pas choisir deux nuits de suite la même personne.",
+        "description": "Gardien invisible, il veille sur une âme différente chaque nuit. Sa présence muette peut frustrer la meute, ou condamner un innocent par un mauvais choix."
+    },
+    {
+        "nom": "Savant Fou",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "À sa mort, il élimine le joueur à sa gauche et à sa droite.",
+        "description": "Génie instable et imprévisible, ses expériences explosent parfois… littéralement. Même dans la mort, il laisse derrière lui un chaos dévastateur."
+    },
+    {
+        "nom": "Sbire",
+        "camp": "Loup-Garou",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il connaît les Loups-Garous mais pas réciproquement. Il agit pour aider les Loups à gagner.",
+        "description": "Serviteur discret des ténèbres, il manipule ses alliés sans jamais révéler sa loyauté. Ses actions favorisent l’avancée des Loups dans l’ombre."
+    },
+    {
+        "nom": "Sbirou",
+        "camp": "Roux-Garou",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il connaît les Roux-Garous mais pas réciproquement. Il agit pour aider les Roux-Garous à gagner.",
+        "description": "Serviteur discret des ténèbres, il manipule ses alliés sans jamais révéler sa loyauté. Ses actions favorisent l’avancée des Roux-Garous dans l’ombre."
+    },
+    {
+        "nom": "Sentinelle",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il peut choisir jusqu’à trois joueurs. Il peut choisir les trois dans la même nuit s'il le souhaite. Les joueurs choisis sont immunisés contre toutes les actions pendant une nuit.",
+        "description": "Protecteur vigilant, il érige un bouclier autour de ses protégés. Sa stratégie et ses choix décisifs peuvent changer le cours de la partie et sauver des vies."
+    },
+    {
+        "nom": "Servante Dévouée",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Elle peut choisir de prendre le rôle d’un joueur avant qu’il soit révélé. Le pouvoir peut uniquement être activé sur un joueur mort au bûcher et elle doit se révéler. Elle récupère son rôle, ses pouvoirs et rejoint son camp.",
+        "description": "Fidèle et silencieuse, elle veille sur les habitants comme une ombre bienveillante. Chaque sacrifice lui permet de gagner de nouvelles forces et de défendre le village sauf si elle passe de l’autre côté."
+    },
+    {
+        "nom": "Sœurs",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, les deux Soeurs se réveillent pour se concerter silencieusement.",
+        "description": "Liées par un lien mystérieux, elles partagent conseils et stratégies dans l’ombre. Leur complicité silencieuse fortifie le village face aux menaces nocturnes."
+    },
+    {
+        "nom": "Soldat Anglais",
+        "camp": "Soldats Anglais",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Les Soldats Anglais se connaissent entre eux. À leur mort, ils entraînent avec eux l’un de leurs deux voisins, choisi aléatoirement.",
+        "description": "Discipliné et déterminé, le Soldat Anglais ne tombe jamais seul. Même dans son dernier souffle, il frappe encore, laissant une trace sanglante dans les rangs des survivants."
+    },
+    {
+        "nom": "Sorcière",
+        "camp": "Village",
+        "aura": "Obscure",
+        "apparence": "Humaine",
+        "pouvoir": "Elle possède deux potions : une pour sauver la victime des Loups-Garous, et une pour en tuer un autre. Chaque potion n’est utilisable qu’une seule fois. Il n'est possible d'utiliser qu’une seule potion par nuit.",
+        "description": "Gardienne de secrets occultes, elle manipule la vie et la mort du bout de ses fioles, pouvant renverser le destin du village entre ses mains tremblantes."
+    },
+    {
+        "nom": "Soulard",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il possède une capacité passive dont il ne connaît pas les effets.",
+        "description": "Errant entre lucidité et ivresse, il agit parfois sans savoir l'impact de ses gestes. Ses actions imprévisibles peuvent aider ou perturber le village."
+    },
+    {
+        "nom": "Tireur",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Il peut se révéler à tout moment et éliminer un joueur durant le débat de jour.",
+        "description": "Silencieux et précis, il attend le moment parfait pour agir. Une seule balle peut bouleverser le destin du village et semer la peur parmi les habitants."
+    },
+    {
+        "nom": "Tireur d’Élite",
+        "camp": "Solitaire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, peut tirer pour tuer sa cible, changer de cible ou simplement marquer un joueur. Il gagne si il est le dernier en vie.",
+        "description": "Prédateur silencieux, il observe depuis l’ombre et attend le tir parfait. Sa seule allégeance est à lui-même, et chaque balle trace le chemin de sa victoire solitaire."
+    },
+    {
+        "nom": "Valet de Cœur",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Une fois dans la partie, il peut forcer les Loups-Garous et les Roux-Garous à ne choisir qu’entre deux joueurs à dévorer. Si les deux joueurs sont des Loups-Garous ou des Roux-Garous, c’est lui qui est mangé.",
+        "description": "Audacieux et courageux, le Valet de Cœur prend des risques pour protéger les innocents. Son intervention unique peut changer le cours de la nuit, mais au prix de sa propre sécurité."
+    },
+    {
+        "nom": "Vampire",
+        "camp": "Vampire",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, il se concerte avec les autres Vampires et ensemble ils mordent un joueur pour le transformer en Vampire après trois tours.",
+        "description": "Créature de la nuit, il se nourrit des vivants pour étendre son influence. Chaque morsure rapproche le village d’une obscurité grandissante."
+    },
+    {
+        "nom": "Villageois",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Il ne possède aucun pouvoir. Il vote le jour et tente de démasquer les ennemies du village.",
+        "description": "Âme simple perdue dans les ombres du village, il ne dispose que de son instinct et de ses mots pour survivre aux nuits dévorantes."
+    },
+    {
+        "nom": "Villageois Maudit",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "S’il est attaqué par les Loups-Garous, il devient un Loup-Garou. Il ne saura pas qu’il est ce rôle et sera désigné comme simple Villageois.",
+        "description": "Innocent mais maudit, il marche parmi les siens en croyant protéger le village. La morsure des ténèbres peut retourner sa loyauté et changer le cours de la partie."
+    },
+    {
+        "nom": "Villageois Villageois",
+        "camp": "Village",
+        "aura": "Lumineuse",
+        "apparence": "Humaine",
+        "pouvoir": "Son rôle est révélé à tous dès le début : il est un simple Villageois sans pouvoir.",
+        "description": "Figure ordinaire exposée à la lumière du jour, il ne possède ni don ni secret. Sa seule force réside dans sa transparence absolue au cœur d’un village noyé de doutes."
+    },
+    {
+        "nom": "Voleur",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Au début de la partie, il peut échanger son rôle avec l’un des deux rôles non distribués. Si un loup si trouve, il est obligé de le choisir",
+        "description": "Âme opportuniste tapie dans l’ombre, il saisit la moindre occasion de changer de destin… quitte à devenir une proie ou un monstre parmi les Loups-Garous."
+    },
+    {
+        "nom": "Voleur d'Orange",
+        "camp": "Village",
+        "aura": "Obscure",
+        "apparence": "Humaine",
+        "pouvoir": "Tant que le Voleur d'Orange est en vie, les joueurs savent qu’une orange a été volée.",
+        "description": "Malicieux et discret, le Voleur d'Orange laisse derrière lui un indice visible mais insaisissable. Son petit larcin devient une énigme pour les habitants, perturbant leur attention et leurs soupçons."
+    },
+    {
         "nom": "Voyante",
         "camp": "Village",
         "aura": "Lumineuse",
@@ -24,12 +1048,20 @@
         "description": "Une femme aux visions nocturnes, traquant les Loups-Garous cachés parmi les vivants."
     },
     {
-        "nom": "Apprentie Voyante",
+        "nom": "Voyante Borgne",
+        "camp": "Village",
+        "aura": "Neutre",
+        "apparence": "Humaine",
+        "pouvoir": "Chaque nuit, elle sonde un joueur et apprend deux rôles : l’un est le rôle réel du joueur sondé, l’autre est un rôle aléatoire présent dans la partie. Il ne peut pas y avoir deux rôles méchants.",
+        "description": "Voyante partielle mais perspicace, la Voyante Borgne scrute les indices avec un œil attentif et un esprit alerte. Même avec sa vision imparfaite, elle parvient à démêler le vrai du faux."
+    },
+    {
+        "nom": "Voyante de Carte",
         "camp": "Village",
         "aura": "Lumineuse",
         "apparence": "Humaine",
-        "pouvoir": "Elle voit la première nuit le rôle d’un joueur de son choix.",
-        "description": "Une femme aux visions nocturnes, traquant les Loups-Garous cachés parmi les vivants."
+        "pouvoir": "Chaque nuit, elle découvre le rôle d’un joueur encore en vie, un rôle qui n’est pas présent dans la partie, (et le rôle d’un joueur mort uniquement en mode flou et obscur).",
+        "description": "Maîtresse des secrets et des arcanes, la Voyante de Carte déchiffre les cartes invisibles du destin. Ses révélations nocturnes dévoilent des vérités cachées et orientent le village dans l’ombre."
     },
     {
         "nom": "Voyante d’Esprit",
@@ -40,806 +1072,6 @@
         "description": "Une femme aux visions nocturnes, traquant les Loups-Garous cachés parmi les vivants."
     },
     {
-        "nom": "Sorcière",
-        "camp": "Village",
-        "aura": "Obscure",
-        "apparence": "Humaine",
-        "pouvoir": "Elle possède deux potions : une pour sauver la victime des Loups-Garous, et une pour en tuer un autre. Chaque potion n’est utilisable qu’une seule fois. Il n'est possible d'utiliser qu’une seule potion par nuit.",
-        "description": "Gardienne de secrets occultes, elle manipule la vie et la mort du bout de ses fioles, pouvant renverser le destin du village entre ses mains tremblantes."
-    },
-    {
-        "nom": "Chasseur",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "À sa mort, il peut éliminer le joueur de son choix.",
-        "description": "Solitaire aux réflexes affûtés, il garde sa dernière balle pour entraîner un ennemi avec lui dans la tombe… même si les Loups-Garous le prennent de court."
-    },
-    {
-        "nom": "Cupidon",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Au début de la partie, il désigne deux joueurs qui deviennent Amoureux. Si l’un meurt, l’autre meurt immédiatement de chagrin.",
-        "description": "Archer aux flèches enchantées, il lie deux âmes pour le meilleur… ou pour les condamner ensemble lorsque les Loups-Garous frappent."
-    },
-    {
-        "nom": "Voleur",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Au début de la partie, il peut échanger son rôle avec l’un des deux rôles non distribués. Si un loup si trouve, il est obligé de le choisir",
-        "description": "Âme opportuniste tapie dans l’ombre, il saisit la moindre occasion de changer de destin… quitte à devenir une proie ou un monstre parmi les Loups-Garous."
-    },
-    {
-        "nom": "Loup-Garou",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Chaque nuit, il se réunit avec sa meute pour choisir une victime à dévorer.",
-        "description": "Créature nocturne à l’âme déchirée, il cache son visage humain le jour pour mieux déchirer la chair des Villageois lorsque la lune l’appelle."
-    },
-    {
-        "nom": "Loup Blanc",
-        "camp": "Solitaire",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Une nuit sur deux, il peut tuer un Loup-Garou, trahissant discrètement sa propre meute. Il doit être le dernier survivant pour gagner.",
-        "description": "Prédateur solitaire, plus cruel encore que les siens. Sous sa fourrure pâle, il cache une ambition glaciale : éliminer Villageois et Loup-Garou pour régner seul."
-    },
-    {
-        "nom": "Ancien",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il survit à la première attaque des Loups-Garous ou des Roux-Garous. Mais si les Villageois le lichen au vote il meurt instantanément.",
-        "description": "Vieillard aux secrets oubliés, il porte la mémoire du village. Les Loups-Garous peinent à le briser."
-    },
-    {
-        "nom": "Idiot du Village",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "S’il est condamné par le vote, il révèle son rôle et survit.",
-        "description": "Âme naïve et maladroite, souvent moquée… mais protégée par un étrange destin."
-    },
-    {
-        "nom": "Salvateur",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il protège un joueur contre les Loups-Garous. Il ne peut pas choisir deux nuits de suite la même personne.",
-        "description": "Gardien invisible, il veille sur une âme différente chaque nuit. Sa présence muette peut frustrer la meute, ou condamner un innocent par un mauvais choix."
-    },
-    {
-        "nom": "Chien-Loup",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Au début du jeu, il choisit de rester fidèle au Village… ou de rejoindre les Loups-Garous.",
-        "description": "Créature au cœur divisé, oscillant entre loyauté et instinct bestial. Une seule décision suffit pour sceller son destin… et celui du village."
-    },
-    {
-        "nom": "Chevalier à l'Épée Rouillée",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Si un Loup-Garou l’attaque, il meurt… mais le Loup-Garou le plus proche de lui à sa droite meurt aussi.",
-        "description": "Vétéran oublié, armé d’une épée corrodée par le temps. Son arme est faible… mais chargée d'une malédiction assez sombre pour entraîner un Loup-Garou avec lui dans la tombe."
-    },
-    {
-        "nom": "Joueur de Flûte",
-        "camp": "Solitaire",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il charme deux joueurs. Quand tous les joueurs sont charmés, il remporte la partie. Les joueurs sont avertis et se connaissent au fur et à mesure. Ils peuvent petit à petit refermer les recherches sur le Joueur de Flûte qui ne peut pas se charmer lui-même..",
-        "description": "Mélodie envoûtante dans l’obscurité du village, il attire les âmes égarées vers son destin, silencieusement, comme une ombre qui glisse parmi les Loups-Garous."
-    },
-    {
-        "nom": "Infect Père des Loups",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Un fois dans la partie,il peut infecter le joueur dévoré par sa meute, le transformant en Loup-Garou.",
-        "description": "Maître de la corruption, il étend sa malédiction silencieusement. Chaque souffle qu’il porte peut arracher une âme au village et l’entraîner dans la meute nocturne."
-    },
-    {
-        "nom": "Grand Méchant Loup",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Chaque nuit, il participe à l’attaque des loups mais peut aussi tuer un joueur en plus si tous les autres Loups et les rôles qui peuvent l'être sont encore en vie.",
-        "description": "Seigneur des ténèbres nocturnes, il guide sa meute avec cruauté. Sa faim insatiable fait trembler le village, et chaque lune est témoin de sa sauvagerie."
-    },
-    {
-        "nom": "Garde",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il peut protéger un joueur contre l’attaque des Loups-Garous et des Roux-Garous, mais il ne peut pas se protéger lui-même.",
-        "description": "Bouclier silencieux du village, il se dresse entre la proie et le prédateur. Son courage discret peut sauver des vies… ou être insuffisant face à la meute."
-    },
-    {
-        "nom": "Berger",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Possède deux moutons. Il peut en envoyer un t’en qu’il en possède encore au moins un, chaque nuit chez un joueur. Si un mouton est envoyé chez un rôle qui possède une apparence de loup, il est dévoré, alors le Berger sera notifié de la mort de son mouton.",
-        "description": "Gardien des créatures du village, il observe silencieusement les Loups-Garous par le biais de ses moutons. Chaque perte renforce l’urgence de ses choix et la tension de la nuit."
-    },
-    {
-        "nom": "Anka",
-        "camp": "Village",
-        "aura": "Obscure",
-        "apparence": "Humaine",
-        "pouvoir": "Se comporte comme un Villageois, mais après sa mort,il continue de fermer les yeux la nuit et peut voter pendant les deux tours suivant lors du vote de jour.",
-        "description": "Chasseur discret des Loups-Garous, il traque ses proies même après la tombe. Sa voix invisible peut influencer le destin du village malgré sa disparition."
-    },
-    {
-        "nom": "Chaperon Rouge",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Tant que le Chasseur est en vie, elle ne peut pas être tuée par les Loups-Garous et les Roux-Garous.",
-        "description": "Jeune et audacieuse, elle arpente le village sous le voile de la nuit. Protégée par le Chasseur, ses pas silencieux peuvent démasquer les prédateurs tapis dans l’ombre."
-    },
-    {
-        "nom": "Héritier",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Il désigne un joueur en début de partie. Si le joueur qu’il a désigné meurt alors qu’il s'agissait d’un Villageois, il hérite de ses pouvoirs pour le reste de la partie. Les pouvoirs à usage unique se régénèrent.",
-        "description": "Portant le poids du destin d’un autre, il attend dans l’ombre son heure. Chaque mort peut renforcer sa position et influencer le cours de la nuit."
-    },
-    {
-        "nom": "Nécromancien",
-        "camp": "Village",
-        "aura": "Obscure",
-        "apparence": "Humaine",
-        "pouvoir": "Il connaît le rôle exact des morts.",
-        "description": "Maître des âmes disparues, il scrute les secrets des morts pour guider ses actions. Chaque révélation renforce sa connaissance et son pouvoir dans l’ombre du village."
-    },
-    {
-        "nom": "Dictateur",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Il peut révéler son rôle à tout moment de la journée. Dès qu’il le fait, si le Maire est méchant, le Dictateur devient Maire et l’ancien Maire meurt; si le Maire fait partie du camp du village, les deux meurent.",
-        "description": "Seigneur de l’ombre et de la manipulation, il tire les ficelles du village à sa guise. Sa révélation bouleverse l’ordre établi et peut sceller le destin du Maire et du village."
-    },
-    {
-        "nom": "Mentaliste",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Il peut connaître l’apparence de la deuxième personne ayant reçu le plus de votes lors du bûcher de la veille.",
-        "description": "Maître des pensées et des intentions, il scrute les signes et indices pour révéler les secrets du village. Chaque révélation éclaire l’ombre qui plane sur la communauté."
-    },
-    {
-        "nom": "Servante Dévouée",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Elle peut choisir de prendre le rôle d’un joueur avant qu’il soit révélé. Le pouvoir peut uniquement être activé sur un joueur mort au bûcher et elle doit se révéler. Elle récupère son rôle, ses pouvoirs et rejoint son camp.",
-        "description": "Fidèle et silencieuse, elle veille sur les habitants comme une ombre bienveillante. Chaque sacrifice lui permet de gagner de nouvelles forces et de défendre le village sauf si elle passe de l’autre côté."
-    },
-    {
-        "nom": "Comédien",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Possède trois rôles au début de la partie et peut se faire passer pour l’un d’eux à tout moment, mais une seule fois par rôle. Il utilisera les pouvoir du rôle durant le tour",
-        "description": "Maître du masque et du mensonge, il manipule les apparences pour protéger le village… ou détourner les soupçons des Loups-Garous."
-    },
-    {
-        "nom": "Pyromane",
-        "camp": "Solitaire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il peut choisir soit de mettre de l’essence sur deux joueurs, soit de brûler tous les joueurs déjà imbibés d’essence. Il ne peut pas être dévoré par les Loup-Garous et les Roux-Garous. Il gagne si il est le dernier survivant.",
-        "description": "Maître du feu et de la destruction, il répand ses flammes silencieusement dans le village. Chaque décision nocturne rapproche le village de la ruine ou du chaos."
-    },
-    {
-        "nom": "Abominable Sectaire",
-        "camp": "Solitaire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque joueur reçoit une couleur. Tout le monde sait qui partage sa couleur. Si tous les joueurs d’une couleur sont morts alors qu’il est encore en vie, il gagne la partie.",
-        "description": "Fanatique des ténèbres, il impose sa loyauté par la couleur et traque ceux qui s’y opposent. Chaque élimination renforce son emprise et installe la terreur dans le village."
-    },
-    {
-        "nom": "Corbeau",
-        "camp": "Village",
-        "aura": "Obscure",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il désigne un joueur qui recevra un vote supplémentaire pour le lendemain qui sera connu de tous.",
-        "description": "Ombre silencieuse et messager de présages sombres, il influence le destin des habitants depuis les toits. Ses choix nocturnes peuvent changer l’issue des votes du village."
-    },
-    {
-        "nom": "Juge-Bègue",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Une fois par partie, il peut décider, la nuit qui succède, de déclencher un nouveau vote immédiatement après le premier.",
-        "description": "Gardien silencieux de la justice, il agit par signes mystérieux. Son intervention peut bouleverser les votes et décider du sort des habitants sans que personne ne s’y attende."
-    },
-    {
-        "nom": "Bouc Émissaire",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Si il y a égalité lors du vote, il meurt même si le vote ne le concerne pas Cependant, si il meurt de cette façon, il pourra décider des membres qui auront le droit de vote le jour suivant.",
-        "description": "Celui sur qui tombent les soupçons, il subit les choix du village. Même dans sa chute, son sort rappelle la fragilité des alliances et l’injustice des regards."
-    },
-    {
-        "nom": "Renard",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il renifle un joueur et ses deux voisins. S’il découvre un trio d’aura lumineuse, il perd son pouvoir. Sinon, il apprend qu’au moins un joueur parmi les trois a une aura obscure, et peut continuer à renifler la nuit suivante.",
-        "description": "Ses sens aiguisés détectent le mal caché parmi les habitants. Chaque nuit, il traque les secrets pour protéger le village des Loups-Garous."
-    },
-    {
-        "nom": "Montreur d’Ours",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque matin, si un Loup-Garou se trouve à sa gauche ou à sa droite, le maître du jeu indique à tous les joueurs que l’ours grogne, révélant la présence d’un loup à proximité.",
-        "description": "Ses instincts et son compagnon imposant détectent la menace qui rôde. Le grognement de l’ours avertit le village des prédateurs tapis dans l’ombre."
-    },
-    {
-        "nom": "Frères",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "La première nuit, les trois Frères se réveillent ensemble et se reconnaissent. Chaque nuit, ils se réveillent pour se concerter.",
-        "description": "Liés par un lien secret et mystérieux, ils s’échangent conseils et stratégies dans l’ombre. Leur cohésion silencieuse renforce le village face aux ténèbres."
-    },
-    {
-        "nom": "Sœurs",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, les deux Soeurs se réveillent pour se concerter silencieusement.",
-        "description": "Liées par un lien mystérieux, elles partagent conseils et stratégies dans l’ombre. Leur complicité silencieuse fortifie le village face aux menaces nocturnes."
-    },
-    {
-        "nom": "Ange",
-        "camp": "Solitaire",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Si il est éliminé lors du premier vote, il remporte la partie immédiatement. Sinon il doit gagner avec le village.",
-        "description": "Innocent et pur au milieu des ténèbres, son existence seule peut inverser le destin du village. Sa disparition précoce change le cours du jeu."
-    },
-    {
-        "nom": "Fou",
-        "camp": "Solitaire",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Son objectif est de se faire éliminer lors d’un vote pour gagner la partie.",
-        "description": "Esprit chaotique et imprévisible, il joue avec les regards et les soupçons. Sa seule victoire est de tomber aux mains du village, semant confusion et rire noir."
-    },
-    {
-        "nom": "Loup Voyant",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Chaque nuit, elle regarde un rôle.",
-        "description": "Au cœur des ténèbres, il scrute le village pour débusquer ses proies. Sa clairvoyance fait des Loups-Garous des prédateurs encore plus redoutables."
-    },
-    {
-        "nom": "Prince",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Les 3 premiers jours et les 3 premières nuits, il ne peut pas mourir.",
-        "description": "Guerrier d’honneur drapé dans le silence. Il n’agit pas la nuit, mais peut lever son blason pour sauver sa peau ou guider les vivants face aux Loups-Garous."
-    },
-    {
-        "nom": "Tireur d’Élite",
-        "camp": "Solitaire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, peut tirer pour tuer sa cible, changer de cible ou simplement marquer un joueur. Il gagne si il est le dernier en vie.",
-        "description": "Prédateur silencieux, il observe depuis l’ombre et attend le tir parfait. Sa seule allégeance est à lui-même, et chaque balle trace le chemin de sa victoire solitaire."
-    },
-    {
-        "nom": "Villageois Villageois",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Son rôle est révélé à tous dès le début : il est un simple Villageois sans pouvoir.",
-        "description": "Figure ordinaire exposée à la lumière du jour, il ne possède ni don ni secret. Sa seule force réside dans sa transparence absolue au cœur d’un village noyé de doutes."
-    },
-    {
-        "nom": "Villageois",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il ne possède aucun pouvoir. Il vote le jour et tente de démasquer les ennemies du village.",
-        "description": "Âme simple perdue dans les ombres du village, il ne dispose que de son instinct et de ses mots pour survivre aux nuits dévorantes."
-    },
-    {
-        "nom": "Président",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Villageois simple qui commence automatiquement maire.",
-        "description": "Figure d’autorité incontestée, son statut éclaire le village d’une confiance rare. Protégé par son titre, il mène les débats tandis que l’ombre rôde autour de lui."
-    },
-    {
-        "nom": "Loup Infiltré",
-        "camp": "Roux-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Loup-Garou particulier qui se réveille avec les Loups-Garous et également avec les Roux-Garous. Il appartient pourtant aux camps des Roux-Garous. Il doit donc trahir les Loups-Garous",
-        "description": "Créature tapie entre deux meutes, il glisse dans les ténèbres avec une double allégeance. Sa présence silencieuse renforce les loups et brouille les certitudes des chasseurs."
-    },
-    {
-        "nom": "Roux-Garou",
-        "camp": "Roux-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Membre d’une meute distincte de Loups-Garous. Il se réveille avec les autres Roux-Garous et ensemble il élimine un joueur. Ils ne peuvent pas éliminer les Loups-Garous durant la nuit.",
-        "description": "Bête rousse aux yeux brûlants, il rôde à la lisière des clans. Sa meute agit dans l’ombre, indépendante et imprévisible, semant la confusion parmi les créatures nocturnes."
-    },
-    {
-        "nom": "Chasseur de Secte",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Immunisé contre la secte. Chaque nuit, il cible un joueur : si celui-ci est membre de la secte, ce joueur meurt.",
-        "description": "Traqueur déterminé, il connaît les signes des fidèles occultes mieux que quiconque. Son regard perçant reconnais les mensonges et purge l’ombre des fanatiques."
-    },
-    {
-        "nom": "Jumeaux",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Deux joueurs sont jumeaux et se connaissent. À tour de rôle, ils deviennent le camp d’un joueur à côté de leur jumeau de manière aléatoire.",
-        "description": "Liés par un lien mystérieux, ils partagent stratégies et secrets. Leur influence change constamment le cours des alliances et des conflits dans le village."
-    },
-    {
-        "nom": "Grand-Mère Grincheuse",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, elle peut empêcher un joueur de voter le jour suivant.",
-        "description": "Ancienne aux habitudes acérées, elle veille sur le village avec sévérité. Sa présence cloue les Villageois et brouille les décisions lors des votes."
-    },
-    {
-        "nom": "Chasseur de Tête",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Doit éliminer au vote une cible choisie aléatoirement en début de partie. S’il réussit, il devient immunisé contre l’attaque des Loups-Garous et des Roux-Garous. Il doit maintenant gagner seul. C'est-à- dire rester face à deux joueurs ou moins. Si sa cible meurt autrement, il reste un Villageois.",
-        "description": "Tireur calculateur et tenace, il traque sa proie désignée avec détermination. Sa survie et sa victoire dépendent de sa capacité à accomplir sa mission dans l’ombre."
-    },
-    {
-        "nom": "Loup Kamikaze",
-        "camp": "Loup-Garou",
-        "aura": "Neutre",
-        "apparence": "Bête",
-        "pouvoir": "À sa mort, il élimine le joueur à sa gauche et à sa droite.",
-        "description": "Féroce et imprévisible, il emporte avec lui les innocents et les ennemis dans sa chute. Sa mort est une tempête qui frappe tous ceux qui l’entourent."
-    },
-    {
-        "nom": "Savant Fou",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "À sa mort, il élimine le joueur à sa gauche et à sa droite.",
-        "description": "Génie instable et imprévisible, ses expériences explosent parfois… littéralement. Même dans la mort, il laisse derrière lui un chaos dévastateur."
-    },
-    {
-        "nom": "Tireur",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Il peut se révéler à tout moment et éliminer un joueur durant le débat de jour.",
-        "description": "Silencieux et précis, il attend le moment parfait pour agir. Une seule balle peut bouleverser le destin du village et semer la peur parmi les habitants."
-    },
-    {
-        "nom": "Évêque",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il possède deux pieux qu’il peut lancer sur un joueur. Si la personne visée est un Vampire, elle est éliminée.",
-        "description": "Protecteur sacré, il traque les créatures de la nuit avec ses armes bénies. Chaque pieu lancé est un jugement divin contre les ténèbres."
-    },
-    {
-        "nom": "Conservateur",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Une seule fois dans la partie, il peut donner l’effet conserviste à un joueur : il change aléatoirement son camp (si Loup → Solo, si Solo → Village, si Village → Loup) ou il ne se passe rien (une chance sur deux).",
-        "description": "Gardien des traditions, il manipule subtilement les allégeances. Son influence peut semer le chaos ou rétablir l’équilibre, selon la volonté du destin."
-    },
-    {
-        "nom": "Pickpocket",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Il peut utiliser le pouvoir d’un joueur ciblé tout en laissant ce joueur conserver le sien. Il peut utiliser sa capacité deux fois maximum. Si la cible n’est pas du Village, ou que la cible a un pouvoir passif, il ne reçoit rien.",
-        "description": "Maître des subtilités et des secrets, il s’empare des capacités d’autrui pour surprendre et renverser les situations. Chaque usage est un vol calculé dans l’ombre."
-    },
-    {
-        "nom": "Apprentie Assassin",
-        "camp": "Solitaire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Acquiert le pouvoir de l’Assassin si celui-ci est éliminé alors qu’elle a voté contre lui. Si l’Assassin n’est pas mort de cette façon, elle devient simple Villageois.",
-        "description": "Apprentie dans l’art du meurtre discret, elle guette les occasions et apprend des ombres. Son destin est lié à celui de son maître, dans la lumière ou dans la mort."
-    },
-    {
-        "nom": "Assassin",
-        "camp": "Solitaire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Peut éliminer un joueur chaque nuit.",
-        "description": "Tueur silencieux dans l’ombre, il frappe sans prévenir. Chaque nuit, sa cible disparaît, semant la peur et le chaos parmi les habitants."
-    },
-    {
-        "nom": "Pestiféré",
-        "camp": "Village",
-        "aura": "Obscure",
-        "apparence": "Humaine",
-        "pouvoir": "Si elle meurt lors d’un vote, elle emporte avec elle le premier joueur qui a voté pour sa mort.",
-        "description": "Malchanceux et redouté, sa mort entraîne vengeance immédiate. Sa présence inspire méfiance et peur, car ses choix finissent toujours par frapper les autres."
-    },
-    {
-        "nom": "Renfield",
-        "camp": "Vampire",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il connaît l’identité des Vampires mais pas réciproquement. Il doit œuvrer pour leur victoire.",
-        "description": "Serviteur silencieux des ténèbres, il aide les créatures de la nuit sans jamais révéler sa loyauté. Son intelligence et sa discrétion font de lui un allié redoutable."
-    },
-    {
-        "nom": "Prêtre",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il est immunisé contre la morsure des Vampires. Chaque nuit, il peut bénir un joueur pour empêcher sa transformation s’il est mordu. Le joueur bénit pourra toutefois être mordu à nouveau.",
-        "description": "Protecteur sacré et vigilant, il veille sur les âmes menacées par les ténèbres. Sa bénédiction est un rempart contre la malédiction des vampires."
-    },
-    {
-        "nom": "Apprentie Détective",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il choisit deux joueurs lors de la première nuit et sait s’ils appartiennent au même camp ou non.",
-        "description": "Jeune enquêteuse aux yeux perçants, elle décèle les alliances et les mensonges. Ses premières observations guident le village dans l’ombre de la nuit."
-    },
-    {
-        "nom": "Détective",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il choisit deux joueurs à identifier et sait s’ils appartiennent au même camp ou non.",
-        "description": "Maître enquêteur, il scrute les alliances et les secrets. Ses observations nocturnes éclairent le village et révèlent les vérités cachées dans l’ombre."
-    },
-    {
-        "nom": "Garde du Corps",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Peut protéger un joueur désigné contre l’élimination lors du vote de jour, mais il ne peut pas se protéger lui-même.",
-        "description": "Sentinelle dévouée, il se place entre le danger et sa cible. Sa vigilance défend les innocents et perturbe les plans des ténèbres."
-    },
-    {
-        "nom": "Loup Berserk",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Il ne peut pas mourir des pouvoirs du village, seulement du vote.",
-        "description": "Furie sauvage des ténèbres, il ignore les protections et les pièges. Seule la force brute ou les siens peuvent l’arrêter dans sa traque nocturne."
-    },
-    {
-        "nom": "Loup Cauchemar",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Trois fois dans la partie, il peut effrayer un joueur, empêchant celui-ci de se réveiller pendant une nuit.",
-        "description": "Créature des ombres, il hante les esprits et fige ses proies dans la peur. Trois cauchemars suffisent pour semer le chaos et la désorganisation au village."
-    },
-    {
-        "nom": "Comte",
-        "camp": "Vampire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, peut effrayer un joueur qui ne se réveillera pas et ne pourra pas utiliser son pouvoir. Gagne avec les Vampires.",
-        "description": "Seigneur des ténèbres, il sème la peur et contrôle les nuits. Chaque souffle de terreur renforce son camp et affaiblit les autres."
-    },
-    {
-        "nom": "Vampire",
-        "camp": "Vampire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il se concerte avec les autres Vampires et ensemble ils mordent un joueur pour le transformer en Vampire après trois tours.",
-        "description": "Créature de la nuit, il se nourrit des vivants pour étendre son influence. Chaque morsure rapproche le village d’une obscurité grandissante."
-    },
-    {
-        "nom": "Comploteuse",
-        "camp": "Solitaire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Marque un joueur comme traître qui devra maintenant gagner avec elle. Elle possède un pouvoir unique de tuer un joueur à tout moment en se révélant. Gagne seule si elle reste seule contre un autre joueur, ou avec son complice et un autre joueur. Si elle meurt, son complice conserve son camp initial. Son complice connaît son identité.",
-        "description": "Maîtresse des manipulations et des trahisons, elle transforme ses alliés en complices. Sa ruse et ses choix stratégiques déterminent l’issue de la partie."
-    },
-    {
-        "nom": "La Chose",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Informe l’un de ses voisins aléatoirement qu’il est La Chose. Le voisin ne saura pas s’il s’agit du joueur à sa droite ou à sa gauche.",
-        "description": "Entité mystérieuse et insaisissable, elle sème le doute et l’incertitude. Ses révélations fragmentaires perturbent les alliances et les stratégies autour d’elle."
-    },
-    {
-        "nom": "Noiseuse",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Elle échange les rôles de deux joueurs lors de sa première action et apprend quels rôles ont été échangés, sans savoir quel rôle appartient à qui.",
-        "description": "Maîtresse du chaos et des illusions, elle manipule les identités et les alliances. Son intervention brouille les cartes et transforme le cours du jeu dès le départ."
-    },
-    {
-        "nom": "Soulard",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il possède une capacité passive dont il ne connaît pas les effets.",
-        "description": "Errant entre lucidité et ivresse, il agit parfois sans savoir l'impact de ses gestes. Ses actions imprévisibles peuvent aider ou perturber le village."
-    },
-    {
-        "nom": "Sentinelle",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il peut choisir jusqu’à trois joueurs. Il peut choisir les trois dans la même nuit s'il le souhaite. Les joueurs choisis sont immunisés contre toutes les actions pendant une nuit.",
-        "description": "Protecteur vigilant, il érige un bouclier autour de ses protégés. Sa stratégie et ses choix décisifs peuvent changer le cours de la partie et sauver des vies."
-    },
-    {
-        "nom": "Diseuse de Bonne Aventure",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "La deuxième nuit, elle recevra la liste de tous les joueurs qui ont utilisé un pouvoir.",
-        "description": "Mystique et perspicace, elle lit les signes de la nuit. Son intuition révèle les actions cachées et guide le village dans l’ombre des secrets."
-    },
-    {
-        "nom": "Divinateur",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Une fois dans la partie, il peut révéler le rôle d’un joueur à tout le monde.",
-        "description": "Voyant clairvoyant et intrépide, il dévoile la vérité cachée derrière les masques. Ses révélations influencent les décisions et la confiance au sein du village."
-    },
-    {
-        "nom": "Doppelganger",
-        "camp": "Solitaire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Il copie le rôle d’un joueur jusqu’à la fin de la partie. Pour le joueur ciblé il ne se passe rien. Pour l’ancien Doppelganger, il récupère les pouvoirs du rôle et doit maintenant gagner avec ce camp. S’il copie un rôle solitaire alors il doit gagner seul.",
-        "description": "Maître des imitations, il prend l’apparence et les capacités d’autrui. Sa duplicité peut changer l’équilibre des forces et semer la confusion au village."
-    },
-    {
-        "nom": "Loup Mystique",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Chaque fois qu’un Loup-Garou meurt, il découvre le rôle d’un joueur non-Loup.",
-        "description": "Maîtres des secrets et de l’obscurité, ils exploitent la disparition de leurs pairs pour percer les mystères des vivants et renforcer leur domination nocturne."
-    },
-    {
-        "nom": "Homme-Loup",
-        "camp": "Loup-Garou",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il est perçu comme un Villageois par les rôles a informations, bien qu’il soit Loup-Garou.",
-        "description": "Habitant maudit par l’apparence trompeuse, il cache sa véritable nature. Entre suspicion et vérité, il doit naviguer prudemment pour protéger le village."
-    },
-    {
-        "nom": "Lycan",
-        "camp": "Village",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Il est perçu comme un Loup-Garou, bien qu’il soit Villageois.",
-        "description": "Créature des ténèbres dissimulée sous une apparence innocente, il infiltre le village et manipule les habitants sans éveiller les soupçons."
-    },
-    {
-        "nom": "Gourou",
-        "camp": "Secte",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il peut enrôler un joueur. Les joueurs enrôlés sont avec la secte. Ils gagnent lorsque tous les joueurs rejoignent la secte. Si le Gourou meurt, sa secte se dissout et toutes les personnes enrôlées meurent avec lui.",
-        "description": "Leader charismatique et manipulateur, il transforme le village en une armée de fidèles. Sa survie est cruciale pour que sa vision s’accomplisse."
-    },
-    {
-        "nom": "Loup Amnésique",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Sait qu’il est Loup-Garou mais doit être attaqué par les Loups pour les rejoindre. Connaît les autres Loups mais ils ne le connaissent pas jusqu’à ce qu’il se réveille.",
-        "description": "Errant entre mémoire et identité, il cherche sa place parmi les ténèbres. Sa loyauté dépend de la reconnaissance de ses pairs, dans l’ombre des forêts."
-    },
-    {
-        "nom": "Loup Feutré",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Chaque nuit, il reçoit un rôle aléatoire parmi les joueurs encore en vie. Il fait croire aux rôles à information qu’il possède le rôle, l'aura et l’apparence du rôle qu'il reçoit. Ce rôle peut être n’importe quel rôle Villageois ou Solitaire.",
-        "description": "Maître du déguisement et de la tromperie, il brouille les perceptions et manipule les enquêtes. Son identité changeante rend sa traque insaisissable."
-    },
-    {
-        "nom": "Loup Anonyme",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Choisit un rôle et devient ce rôle uniquement aux yeux des rôles à information. Il change de nom, d’aura et d’apparence.",
-        "description": "Créature discrète et rusée, il se dissimule derrière un masque trompeur. Seuls ceux qui scrutent les vérités cachées sont dupés par son identité."
-    },
-    {
-        "nom": "Sbire",
-        "camp": "Loup-Garou",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il connaît les Loups-Garous mais pas réciproquement. Il agit pour aider les Loups à gagner.",
-        "description": "Serviteur discret des ténèbres, il manipule ses alliés sans jamais révéler sa loyauté. Ses actions favorisent l’avancée des Loups dans l’ombre."
-    },
-    {
-        "nom": "Chasseur de Fantôme",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Il regarde le rôle d’un joueur lors des nuits 2 et 4. S’il découvre un rôle méchant, il rejoint le camp du méchant sauf s’il s’agit d’un rôle solitaire. Si il découvre un méchant à la nuit 2, il perd le pouvoir de regard pour la nuit 4.",
-        "description": "Traqueur des ombres et des secrets, il scrute les intentions des autres. Son destin peut basculer selon les vérités qu’il découvre dans la nuit."
-    },
-    {
-        "nom": "Loup Alpha",
-        "camp": "Loup-Garou",
-        "aura": "Neutre",
-        "apparence": "Bête",
-        "pouvoir": "Leader des Loups-Garous. En cas de désaccord les autres Loups suivent ses choix lors des attaques nocturnes.",
-        "description": "Chef imposant et redouté, il guide la meute dans l’ombre. Sa stratégie et son autorité déterminent la survie et la puissance de sa meute."
-    },
-    {
-        "nom": "Enfant Sauvage",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Choisit un modèle au début de la partie. Si cette personne meurt, il devient Loup-Garou.",
-        "description": "Orphelin guidé par son attachement, il observe et apprend. La disparition de sa figure de référence transforme son innocence en fureur nocturne."
-    },
-    {
-        "nom": "Loup Rêveur",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Il ne connaît pas les autres Loups-Garous et n’est pas connu d’eux. Il n’a pas le droit de voter avec les autres Loups-Garous. Si il est le seul Loup survivant, il devient un Loup-Garou classique.",
-        "description": "Solitaire et mystérieux, il erre dans la nuit sans repères. Sa transformation finale lui confère la pleine puissance de la meute lorsqu’il reste seul."
-    },
-    {
-        "nom": "Jeune Loup",
-        "camp": "Loup-Garou",
-        "aura": "Neutre",
-        "apparence": "Bête",
-        "pouvoir": "À sa mort, peut éliminer un joueur de son choix.",
-        "description": "Prédateur en devenir, sa dernière vengeance laisse une trace sanglante. Même dans la mort, il influence la nuit et le destin des survivants."
-    },
-    {
-        "nom": "Villageois Maudit",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "S’il est attaqué par les Loups-Garous, il devient un Loup-Garou. Il ne saura pas qu’il est ce rôle et sera désigné comme simple Villageois.",
-        "description": "Innocent mais maudit, il marche parmi les siens en croyant protéger le village. La morsure des ténèbres peut retourner sa loyauté et changer le cours de la partie."
-    },
-    {
-        "nom": "Fossoyeur",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "À sa mort, il choisit un joueur et le maître du jeu choisit un joueur du camp opposé. Si le Fossoyeur désigne un méchant, l’autre nom annoncé sera un innocent et inversement. Le maître du jeu annoncera : Il y a un Villageois et un méchant entre (nom1) et (nom2).",
-        "description": "Gardien des tombes et des secrets, sa dernière action dévoile des vérités surprenantes. Même dans la mort, il influence le destin du village et des Loups."
-    },
-    {
-        "nom": "Rival",
-        "camp": "Solitaire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Il connaît le Cupidon et possède une flèche pour tuer un des amoureux. S' il se trompe, il meurt et la cible survit. Si il réussit, le joueur visé meurt et il découvre l’identité de l’autre membre du couple, avec lequel le Rival est maintenant lié. Si le couple meurt avant qu’il réussisse à en éliminer un avec son pouvoir, il les suit dans la mort.",
-        "description": "Machinateur et jaloux, il manipule le cœur et le destin des amoureux. Ses choix déterminent qui survivra et qui tombera dans l’ombre."
-    },
-    {
-        "nom": "Pronostiqueur",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il peut voir l’apparence d’un joueur, mais peut recevoir l’information inversée. Si c’est le cas, toutes ses informations seront inversées pour le reste de la partie. A lui de comprendre si c’est pronostique son juste ou non.",
-        "description": "Mystique et incertain, il scrute l’avenir mais ses visions peuvent être trompeuses. Ses prédictions influencent les choix du village, pour le meilleur ou pour le pire."
-    },
-    {
-        "nom": "Faux Juge",
-        "camp": "Solitaire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il peut emprisonner un joueur supplémentaire, le privant d’agir durant la nuit. Lorsque tous les joueurs encore en vie ont été emprisonnés, la partie se termine immédiatement et il remporte la victoire.",
-        "description": "Usurpateur de justice, il avance dans l’ombre pour imposer son propre ordre. À force d’enchaîner les innocents comme les coupables, il étouffe progressivement le village dans une justice pervertie jusqu’à régner seul."
-    },
-    {
-        "nom": "Loup Brouilleur",
-        "camp": "Loup-Garou",
-        "aura": "Brouillée",
-        "apparence": "Brouillée",
-        "pouvoir": "Chaque nuit, il se réveille une seconde fois pour brouiller l'apparence d’un joueur. Ce joueur voit son apparence masquée : un rôle à information le verra brouillée au lieu de son aura ou de son apparence et ce jusqu'à la fin de la partie.",
-        "description": "C’est un Loup-Garou. Maître des illusions nocturnes, il altère les perceptions du village. Là où il passe, les identités s’effacent, semant la confusion et offrant une couverture parfaite à sa meute."
-    },
-    {
-        "nom": "Renard Polaire",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il désigne un nombre de joueurs égal au nombre de joueurs ayant une apparence de loup plus un dans la composition. Le MJ lui révèle aléatoirement un joueur humain parmi ceux qu’il a désignés. À chaque fois qu’un joueur ayant une apparence de loup meurt et que sa carte est révélée, le nombre de joueurs que le Renard Polaire peut désigner chaque nuit diminue de un.",
-        "description": "Créature sensible aux auras, le Renard Polaire perçoit instinctivement la chaleur humaine sous la neige. Plus les faux loups tombent, plus son flair se concentre, le guidant avec précision vers les innocents au cœur du blizzard."
-    },
-    {
-        "nom": "Belette",
-        "camp": "Village",
-        "aura": "Obscure",
-        "apparence": "Humaine",
-        "pouvoir": "Ne peut pas mourir de l’attaque d’un ennemi du village. Elle peut toutefois mourir du vote ou d’autres effets.",
-        "description": "Agile, vive et insaisissable, la Belette échappe toujours aux griffes des monstres qui rôdent. Sa petite taille et ses réflexes fulgurants font d’elle une cible presque impossible à attraper durant la nuit."
-    },
-    {
-        "nom": "Empathique",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il découvre aléatoirement l’identité d’un joueur humain encore en vie.",
-        "description": "Doté d’un instinct presque surnaturel, l’Empathique perçoit les intentions des autres sans même avoir à les observer. Son esprit capte les vibrations de ceux qui n’ont rien de bestial, lui révélant chaque nuit un allié potentiel."
-    },
-    {
-        "nom": "Éducateur",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Tant qu’il est en vie, l’Enfant Sauvage ne peut pas se transformer en Loup-Garou, même si son modèle meurt.",
-        "description": "Gardien bienveillant mais strict, l’Éducateur garde un œil vigilant sur l’Enfant Sauvage. Sa présence rassurante et son autorité naturelle retiennent les pulsions bestiales qui sommeillent en lui."
-    },
-    {
-        "nom": "Compatriote",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Reçoit au début de la partie le nom d’un Villageois. Si ce Villageois meurt, il reçoit immédiatement le nom d’un autre Villageois encore en vie, et ainsi de suite jusqu’à ce qu’il n’en reste plus.",
-        "description": "Toujours en lien avec les siens, le Compatriote ressent instinctivement l’aura des véritables Villageois. À chaque perte, un nouveau fil se tisse, lui permettant de suivre les derniers piliers de l’innocence."
-    },
-    {
-        "nom": "Bonne Sœur",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, elle apprend quels joueurs vont mourir. Une fois dans la partie, elle peut choisir de sauver un joueur.",
-        "description": "Protectrice bienveillante, la Bonne Sœur veille silencieusement sur le village. Guidée par ses visions, elle peut détourner une destinée funeste… mais une seule fois."
-    },
-    {
-        "nom": "Alchimiste",
-        "camp": "Village",
-        "aura": "Obscure",
-        "apparence": "Humaine",
-        "pouvoir": "Une fois dans la partie, il peut utiliser une potion pour tuer un joueur de son choix.",
-        "description": "Maître des fioles et des secrets anciens, l’Alchimiste manie des mixtures redoutables. Son savoir dangereux peut renverser le cours d'une nuit… ou sceller un destin."
-    },
-    {
-        "nom": "Soldat Anglais",
-        "camp": "Soldats Anglais",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Les Soldats Anglais se connaissent entre eux. À leur mort, ils entraînent avec eux l’un de leurs deux voisins, choisi aléatoirement.",
-        "description": "Discipliné et déterminé, le Soldat Anglais ne tombe jamais seul. Même dans son dernier souffle, il frappe encore, laissant une trace sanglante dans les rangs des survivants."
-    },
-    {
         "nom": "Voyante Fragmentée",
         "camp": "Village",
         "aura": "Neutre",
@@ -848,243 +1080,11 @@
         "description": "Ses visions ne se livrent jamais entières. La Voyante Fragmentée disperse la vérité en éclats, confiant à chacun une part du secret, insuffisante seule mais puissante si elle est rassemblée."
     },
     {
-        "nom": "Analyste",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il connaît le nombre d’ennemis du village encore en vie.",
-        "description": "Froid et méthodique, l’Analyste observe les équilibres invisibles. Nuit après nuit, il mesure l’ampleur de la menace, offrant au village une vision claire de son déclin ou de son salut."
-    },
-    {
-        "nom": "Athéna",
-        "camp": "Dieux",
-        "aura": "Lumineuse",
-        "apparence": "Divine",
-        "pouvoir": "Chaque nuit, elle peut protéger un dieu de la mort. Elle ne peut pas protéger deux fois de suite le même dieu.",
-        "description": "Déesse de la sagesse et de la stratégie, Athéna veille sur les siens avec discernement. Sa protection divine détourne la mort, mais jamais sans limite ni répétition."
-    },
-    {
-        "nom": "Asclépios",
-        "camp": "Dieux",
-        "aura": "Lumineuse",
-        "apparence": "Divine",
-        "pouvoir": "Une fois dans la partie, il peut ressusciter un dieu mort.",
-        "description": "Dieu de la guérison et des miracles, Asclépios défie l’inéluctable. Par son pouvoir sacré, il peut rappeler une divinité du royaume des morts… une seule fois."
-    },
-    {
-        "nom": "Héra",
-        "camp": "Dieux",
-        "aura": "Lumineuse",
-        "apparence": "Divine",
-        "pouvoir": "À sa mort, elle élimine un joueur avec elle et empêche un autre joueur de se réveiller lors de la nuit suivante.",
-        "description": "Reine des dieux, fière et implacable, Héra ne quitte jamais ce monde sans imposer sa volonté. Même déchue, son courroux divin frappe et impose le silence aux nuits suivantes."
-    },
-    {
-        "nom": "Aphrodite",
-        "camp": "Dieux",
-        "aura": "Lumineuse",
-        "apparence": "Divine",
-        "pouvoir": "À sa mort, lors de la nuit suivante, seuls les dieux se réveillent.",
-        "description": "Déesse de l’amour et des passions, Aphrodite bouleverse l’ordre établi jusque dans sa chute. Sa disparition plonge les mortels dans le silence, laissant une nuit entière aux seules divinités."
-    },
-    {
         "nom": "Zeus",
         "camp": "Dieux",
         "aura": "Lumineuse",
         "apparence": "Divine",
         "pouvoir": "Toutes les deux nuits, il peut empêcher un joueur de se réveiller durant la nuit.",
         "description": "Souverain de l’Olympe, Zeus impose sa loi par la foudre et le silence. D’un simple décret, il prive un mortel de l’action nocturne, rappelant la suprématie des dieux."
-    },
-    {
-        "nom": "Frère Loup",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Humaine",
-        "pouvoir": "Il agit exactement comme l’un des trois Frères : il se réveille avec eux et est perçu comme tel. En réalité, il est Loup-Garou.",
-        "description": "Déguisé sous les traits d’un frère de confiance, il partage leurs gestes et leurs silences. Derrière cette fraternité trompeuse se cache un prédateur prêt à trahir au moment opportun."
-    },
-    {
-        "nom": "Loup Jumeaux",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Deux Loups-Garous simples liés. Si l’un meurt, l’autre cesse de se réveiller la nuit et apparaît comme humain face aux rôles à information. Il récupère sa faculté de loup si c’est le dernier loup encore en vie.",
-        "description": "Deux âmes liées par le sang et la meute, leur destin est entrelacé. La chute de l’un voile temporairement l’autre, mais quand il ne reste plus qu’un seul prédateur, sa nature rejaillit dans toute sa force."
-    },
-    {
-        "nom": "Fumeur",
-        "camp": "Loup-Garou",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Lors de la première attaque des Loups-Garous le visant, il survit et tue un Loup à la place. Il connaît tous les Loups, mais eux ne le connaissent pas. Il doit gagner avec eux.",
-        "description": "Discret et rusé, le Fumeur se joue de sa propre meute. Son premier souffle de rébellion bouleverse les plans nocturnes, semant la confusion parmi ceux qu’il doit pourtant aider à triompher."
-    },
-    {
-        "nom": "Greffier",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Une fois dans la partie, il peut demander qui a voté pour l’élimination du jour précédent et connaître combien d'ennemis du village ont voté pour cette élimination.",
-        "description": "Archiviste de la nuit et des voix, le Greffier traque les intentions derrière chaque vote. Son œil attentif révèle les conspirations et éclaire la vérité cachée derrière les urnes."
-    },
-    {
-        "nom": "Insondable",
-        "camp": "Village",
-        "aura": "Brouillée",
-        "apparence": "Brouillée",
-        "pouvoir": "Toutes les informations sur lui sont brouillées pour les rôles à information.",
-        "description": "Mystérieux et insaisissable, l’Insondable glisse dans l’ombre des nuits, ses intentions dissimulées même aux yeux les plus perspicaces. Aucune vision ne peut percer son secret."
-    },
-    {
-        "nom": "Chef Anglais",
-        "camp": "Soldats Anglais",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "À sa mort, il peut emporter avec lui n’importe quel joueur de son choix. Il collabore avec les Soldats Anglais.",
-        "description": "Leader stratégique et impitoyable, le Chef Anglais ne tombe jamais seul. Même dans la mort, il frappe avec précision, entraînant un ennemi dans sa chute."
-    },
-    {
-        "nom": "Renard Mystérieux",
-        "camp": "Solitaire",
-        "aura": "Obscure",
-        "apparence": "Humaine",
-        "pouvoir": "Elle ne peut pas mourir la nuit sauf si elle est espionnée. Si c’est le cas alors elle meurt instantanément. Elle gagne si seuls deux autres joueurs sont encore en vie.",
-        "description": "Insaisissable et prudent, le Renard Mystérieux se faufile entre les joueurs. Sa survie dépend de sa discrétion totale, et sa victoire ne peut être atteinte qu’avec habileté et patience."
-    },
-    {
-        "nom": "Insoucieux",
-        "camp": "Solitaire",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il peut choisir entre se protéger, éliminer un joueur, ou découvrir l’identité d’un joueur. Il doit être le dernier en vie pour gagner.",
-        "description": "Libre et imprévisible, l’Insoucieux suit ses envies sans contrainte. Sa capacité à changer d’action chaque nuit le rend dangereux et difficile à anticiper."
-    },
-    {
-        "nom": "Devin Maléfique",
-        "camp": "Solitaire",
-        "aura": "Obscure",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, il peut tenter de deviner à qui appartient un rôle spécifique décidé aléatoirement. S’il réussit, le joueur ciblé meurt immédiatement, même s’il est protégé.",
-        "description": "Maître des présages funestes, le Devin Maléfique manipule les secrets et la destinée. Chaque intuition exacte scelle le sort d’un joueur, répandant la terreur dans le village."
-    },
-    {
-        "nom": "Louveteau",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "À sa mort, les Loups-Garous peuvent éliminer une deuxième personne lors de la nuit suivante.",
-        "description": "Jeune et impétueux, le Louveteau ne connaît pas la peur. Même dans la mort, son esprit guerrier souffle la force supplémentaire à sa meute pour frapper encore."
-    },
-    {
-        "nom": "Loup Menteur",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "À sa mort, il peut choisir quel rôle sera affiché à sa place, trompant ainsi les joueurs restants.",
-        "description": "Manipulateur et rusé, le Loup Menteur joue avec les perceptions des vivants. Même dans la mort, il sème le doute et la confusion parmi ceux qui l’entourent."
-    },
-    {
-        "nom": "Loup Intelligent",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Il connaît le rôle exact du joueur ciblés par les Loups-Garous chaque nuit.",
-        "description": "Calculateur et stratège, le Loup Intelligent déchiffre les secrets de la meute. Sa clairvoyance lui permet de guider les attaques et de maximiser l’efficacité de chaque nuit."
-    },
-    {
-        "nom": "Loup Ténébreux",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Une fois dans la partie, il peut dissimuler le rôle d’un joueur mort lors d’un vote, trompant ainsi les autres joueurs.",
-        "description": "Maître des ombres et des illusions, le Loup Ténébreux brouille la vérité et manipule les perceptions. Son acte peut semer la confusion et retarder la justice du village."
-    },
-    {
-        "nom": "Loup Divin",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Divine",
-        "pouvoir": "Une fois dans la partie, il choisit un rôle qui sera affiché à tous les rôles de voyance. Quel que soit le joueur sondé, pendant une nuit et un jour. Il change également l’aura et l’apparence durant l’activation de son pouvoir.",
-        "description": "Manipulateur des perceptions et maître des tromperies, le Loup Divin altère la réalité aux yeux des voyants, semant le doute et la désinformation dans le village."
-    },
-    {
-        "nom": "Voleur d'Orange",
-        "camp": "Village",
-        "aura": "Obscure",
-        "apparence": "Humaine",
-        "pouvoir": "Tant que le Voleur d'Orange est en vie, les joueurs savent qu’une orange a été volée.",
-        "description": "Malicieux et discret, le Voleur d'Orange laisse derrière lui un indice visible mais insaisissable. Son petit larcin devient une énigme pour les habitants, perturbant leur attention et leurs soupçons."
-    },
-    {
-        "nom": "Loup Voleur d'Orange",
-        "camp": "Loup-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Tant que le Loup Voleur d'Orange est en vie, les joueurs savent qu’une orange a été volée.",
-        "description": "Rusé et provocateur, le Loup Voleur d'Orange laisse un indice visible de son larcin. Même dévoilé, son méfait continue de semer le doute et détourner les soupçons."
-    },
-    {
-        "nom": "Voyante de Carte",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, elle découvre le rôle d’un joueur encore en vie, un rôle qui n’est pas présent dans la partie, (et le rôle d’un joueur mort uniquement en mode flou et obscure).",
-        "description": "Maîtresse des secrets et des arcanes, la Voyante de Carte déchiffre les cartes invisibles du destin. Ses révélations nocturnes dévoilent des vérités cachées et orientent le village dans l’ombre."
-    },
-    {
-        "nom": "Voyante Borgne",
-        "camp": "Village",
-        "aura": "Neutre",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque nuit, elle sonde un joueur et apprend deux rôles : l’un est le rôle réel du joueur sondé, l’autre est un rôle aléatoire présent dans la partie. Il ne peut pas y avoir deux rôles méchants.",
-        "description": "Voyante partielle mais perspicace, la Voyante Borgne scrute les indices avec un œil attentif et un esprit alerte. Même avec sa vision imparfaite, elle parvient à démêler le vrai du faux."
-    },
-    {
-        "nom": "Valet de Cœur",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Une fois dans la partie, il peut forcer les Loups-Garous et les Roux-Garous à ne choisir qu’entre deux joueurs à dévorer. Si les deux joueurs sont des Loups-Garous ou des Roux-Garous, c’est lui qui est mangé.",
-        "description": "Audacieux et courageux, le Valet de Cœur prend des risques pour protéger les innocents. Son intervention unique peut changer le cours de la nuit, mais au prix de sa propre sécurité."
-    },
-    {
-        "nom": "Plaignante",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Une fois dans la partie, elle apprend l’identité exacte d’un joueur qu’elle a voté pour l’élimination.",
-        "description": "Curieuse et déterminée, la Plaignante utilise son vote comme une arme de connaissance. Un seul geste suffit pour révéler les secrets des autres, orientant le village vers la vérité."
-    },
-    {
-        "nom": "Hyène",
-        "camp": "Solitaire",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Elle se réveille avec les Loups-Garous, les Loups-Roux et les Vampires mais doit gagner seule. Quand tous les Loups-Garous ou les Loups-Roux sont morts, elle récupère leur pouvoir de tuer. Elle peut récupérer le pouvoir des deux meutes si elle est la dernière en vie.",
-        "description": "Prédatrice rusée et indépendante, la Hyène observe toutes les meutes et se joue des alliances. Sa patience et sa stratégie nocturne font d’elle une menace invisible pour tous."
-    },
-    {
-        "nom": "Roux-Roux",
-        "camp": "Roux-Garou",
-        "aura": "Obscure",
-        "apparence": "Bête",
-        "pouvoir": "Si il ne reste qu’un seul membre dans la meute des Loups-Garous et que le Roux-Roux est encore en vie, alors ce Loup rejoint automatiquement la meute des Roux-Garous et gagne avec eux.",
-        "description": "Téméraire et influent, le Roux-Roux manipule subtilement la meute. Sa présence peut rallier un Loup-Garou isolé à son camp, changeant le destin de la nuit."
-    },
-    {
-        "nom": "Colombe",
-        "camp": "Village",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Chaque jour, elle protège un joueur du vote du bûcher. Elle ne peut pas protéger deux fois de suite le même joueur.",
-        "description": "Pacifique et attentionnée, la Colombe veille sur les innocents avec vigilance. Son rôle discret mais crucial permet de sauver des vies au moment critique du vote."
-    },
-    {
-        "nom": "Sbirou",
-        "camp": "Roux-Garou",
-        "aura": "Lumineuse",
-        "apparence": "Humaine",
-        "pouvoir": "Il connaît les Roux-Garous mais pas réciproquement. Il agit pour aider les Roux-Garous à gagner.",
-        "description": "Serviteur discret des ténèbres, il manipule ses alliés sans jamais révéler sa loyauté. Ses actions favorisent l’avancée des Roux-Garous dans l’ombre."
     }
 ]

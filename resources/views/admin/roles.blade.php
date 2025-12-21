@@ -73,7 +73,7 @@
     </div>
     <div class="offcanvas-body">
         @foreach ($allEtats as $etat)
-            <span class="badge rounded-pill text-dark border border-light shadow-sm mb-1"
+            <span class="badge rounded-pill text-light border border-dark shadow-sm mb-1"
                 style="background-color: {{ $etat->color ?? '#f8f9fa' }}; cursor: pointer;"
                 data-bs-toggle="modal"
                 data-bs-target="#etatModal{{ $etat->id }}"
@@ -122,7 +122,7 @@
                     {{-- Barre de recherche --}}
                     <div class="col-md-12">
                         <div class="input-group">
-                            <span class="input-group-text bg-white border-end-0"><i
+                            <span class="input-group-text border-end-0"><i
                                     class="bi bi-search text-muted"></i></span>
                             <input type="text" class="form-control border-start-0 ps-0" id="searchInput"
                                 placeholder="Rechercher par nom uniquement..." onkeyup="filterTable()">
@@ -135,7 +135,7 @@
 
                     {{-- Filtres Avancés (Collapsible) --}}
                     <div class="collapse col-12" id="advancedFilters">
-                        <div class="card card-body bg-light border-0">
+                        <div class="card card-body border-0">
                             <div class="row g-4">
                                 {{-- Filtre Camps --}}
                                 <div class="col-md-4">
@@ -199,7 +199,7 @@
             <div class="card-body p-0">
                 <div class="table-responsive">
                     <table class="table table-striped table-hover align-middle mb-0" id="rolesTable">
-                        <thead class="table-light">
+                        <thead class="">
                             <tr>
                                 <th>Camps</th>
                                 <th>Nom du Rôle</th>

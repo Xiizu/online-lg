@@ -122,7 +122,7 @@
                     {{-- Interface de Filtres (Style Page Rôles) --}}
                     <div class="mb-3">
                         <div class="input-group">
-                            <span class="input-group-text bg-white border-end-0"><i
+                            <span class="input-group-text border-end-0"><i
                                     class="bi bi-search text-muted"></i></span>
                             <input type="text" class="form-control border-start-0 ps-0" id="role-search"
                                 placeholder="Rechercher un rôle par nom..." onkeyup="filterRoles()">
@@ -135,7 +135,7 @@
 
                     {{-- Filtres Avancés (Collapsible) --}}
                     <div class="collapse mb-3" id="advancedFilters">
-                        <div class="card card-body bg-light border-0">
+                        <div class="card card-body border-0">
                             <div class="row g-3">
                                 {{-- Filtre Camps --}}
                                 <div class="col-md-4">
@@ -192,20 +192,20 @@
                     </div>
 
                     {{-- Liste des rôles --}}
-                    <div class="overflow-auto border rounded p-2 bg-light" style="max-height: 50vh;">
+                    <div class="overflow-auto border rounded p-2 " style="max-height: 50vh;">
                         <ul class="list-group list-group-flush" id="roles-list">
                             @foreach ($allRoles as $role)
                                 @php
                                     $campNames = $role->camps->pluck('name')->join('/');
                                 @endphp
-                                <li class="list-group-item bg-white mb-1 rounded border-0 shadow-sm"
+                                <li class="list-group-item mb-1 rounded border-0 shadow-sm"
                                     data-camps="{{ strtolower($campNames) }}" data-aura="{{ strtolower($role->aura) }}"
                                     data-apparence="{{ strtolower($role->apparence) }}">
 
                                     <div class="d-flex align-items-center justify-content-between gap-2 py-1">
                                         <div class="flex-grow-1">
                                             <div class="d-flex align-items-center gap-2">
-                                                <strong class="text-dark role-name" style="font-size: 1.05rem;">
+                                                <strong class="role-name" style="font-size: 1.05rem;">
                                                     {{ $role->nom }}
                                                 </strong>
                                                 {{-- Badges indicatifs --}}
@@ -224,7 +224,7 @@
                                         </div>
 
                                         {{-- Compteur --}}
-                                        <div class="d-flex align-items-center gap-2 flex-shrink-0 bg-light rounded p-1">
+                                        <div class="d-flex align-items-center gap-2 flex-shrink-0 rounded p-1">
                                             <button class="btn btn-sm btn-outline-danger border-0 fw-bold"
                                                 style="width: 28px; height: 28px;"
                                                 onclick="addOrRemoveOne({{ $role->id }}, 'decrement')">-</button>
@@ -244,7 +244,7 @@
                         {{-- Les alertes seront insérées ici par JavaScript --}}
                     </div>
                 </div>
-                <div class="modal-footer bg-light">
+                <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                     <button type="button" class="btn btn-primary px-4" onclick="createGame()">
                         <i class="bi bi-play-fill"></i> Créer la partie

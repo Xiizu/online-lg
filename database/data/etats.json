@@ -1,17 +1,182 @@
 [
     {
-        "nom": "Contaminé",
-        "description": "Vous avez été bléssé par une épée rouillée.",
-        "color": "#8B0000"
+        "nom": "Allégeance Bleue",
+        "description": "Tu es considéré comme Bleu vis-à-vis de l’Abominable Secteur.",
+        "color": "#0000FF"
     },
     {
-        "nom": "Bénédiction",
-        "description": "Vous êtes protégé par une force divine.",
-        "color": "#FFFF00"
+        "nom": "Allégeance Rouge",
+        "description": "Tu es considéré comme Rouge vis-à-vis de l’Abominable Secteur.",
+        "color": "#FF0000"
+    },
+    {
+        "nom": "Amnésie Rompue",
+        "description": "Après une attaque des Loups, tu retrouves ta véritable nature et rejoins le camp des Loups. Cet état est attribué au Villageois Maudit et au Loup-Garou Amnésique.",
+        "color": "#F35547"
+    },
+    {
+        "nom": "Amoureux",
+        "description": "Cupidon t’a lié à un autre joueur. Vos destins sont désormais indissociables. Si l'un des deux meurt, l’autre meurt immédiatement.",
+        "color": "#FF00FF"
+    },
+    {
+        "nom": "Brouillage Mystique",
+        "description": "Le Loup Brouilleur a rendu ton rôle brouillé. Toute tentative de révélation ou d’identification te concernant est faussée. Le Loup Brouilleur et l’Insondable commencent la partie avec cet effet.",
+        "color": "#6FA8DC"
+    },
+    {
+        "nom": "Charmé",
+        "description": "Le Joueur de Flûte t’a charmé. Tant qu’il est en vie, tu restes sous son influence. Si tous les joueurs sont charmés, le Joueur de Flûte remporte la partie.",
+        "color": "#FF87FF"
+    },
+    {
+        "nom": "Cible",
+        "description": "Le Chasseur de Tête a pour objectif de t’éliminer.",
+        "color": "#C27CC2"
+    },
+    {
+        "nom": "Conversion Conservatrice",
+        "description": "Sous l’effet du Conservateur, tu changes de camp selon ta nature initiale :- un Villageois devient Loup, - un Loup devient Solitaire, -un Solitaire devient Villageois et perd l’ensemble de ses pouvoirs.",
+        "color": "#93C47D"
+    },
+    {
+        "nom": "Divination",
+        "description": "Le Divinateur révèle publiquement ton rôle.",
+        "color": "#38761D"
+    },
+    {
+        "nom": "Effrayé",
+        "description": "Sous l’effet du Comte, d’Héra, du Loup Cauchemar ou de Zeus, tu es paralysé par la peur et ne te réveille pas cette nuit.",
+        "color": "#741B47"
+    },
+    {
+        "nom": "Emprisonné",
+        "description": "Tant que le Faux Juge est en vie, tu ne peux plus utiliser ton pouvoir.",
+        "color": "#434343"
+    },
+    {
+        "nom": "Équilibre Conservé",
+        "description": "Le pouvoir du Conservateur n’a eu aucun effet sur toi.",
+        "color": "#93C47D"
+    },
+    {
+        "nom": "Folie meurtrière",
+        "description": "Tant qu’aucun Loup-Garou n’est mort, le Grand Méchant Loup peut éliminer un second joueur.",
+        "color": "#FF007A"
+    },
+    {
+        "nom": "Héritage des Loups",
+        "description": "La Hyène est la dernière survivante de la meute des Loups-Garous et récupère leur pouvoir de mort.",
+        "color": "#AE0000"
+    },
+    {
+        "nom": "Héritage des Roux",
+        "description": "La Hyène est la dernière survivante de la meute des Roux-Garous et récupère leur pouvoir de mort.",
+        "color": "#D18B00"
     },
     {
         "nom": "Huilé",
-        "description": "Le pyromane vous a renversé un bidon entier d'essence.",
-        "color": "#FFA500"
+        "description": "Le Pyromane t’a recouvert d’essence. Cet état persiste jusqu’à ta mort ou celle du Pyromane. Il peut choisir de te faire brûler dès la nuit suivante.",
+        "color": "#FF9900"
+    },
+    {
+        "nom": "Hurlement Éteint",
+        "description": "Lorsque l’autre Loup Jumeau meurt, le Loup Jumeau encore en vie perd son pouvoir, cesse de participer aux discussions nocturnes et devient un simple humain jusqu’à la mort de tous les autres Loups.",
+        "color": "#552C00"
+    },
+    {
+        "nom": "Infection ",
+        "description": "L’Infecte Père des Loups t’a infecté. Tu rejoins le camp des Loups et gagnes désormais avec eux.",
+        "color": "#F88888"
+    },
+    {
+        "nom": "Initiation",
+        "description": "Tu as été converti et rejoins la Secte, avec laquelle tu dois désormais gagner. Si le Gourou meurt, tu le suivras immédiatement dans le trépas.",
+        "color": "#D3D300"
+    },
+    {
+        "nom": "Insaisissable",
+        "description": "La Sentinelle te protège de toute action durant le tour.",
+        "color": "#AAAAAA"
+    },
+    {
+        "nom": "Insigne du Maire",
+        "description": "Ton statut de Maire est connu de tous. Tu disposes des capacités associées à ce rôle.",
+        "color": "#274E13"
+    },
+    {
+        "nom": "Ligne de Mire",
+        "description": "Le Tireur d’Élite t’a pris pour cible. Cet état disparaît s’il meurt ou s’il change de cible.",
+        "color": "#3C78D8"
+    },
+    {
+        "nom": "Mordu",
+        "description": "Il y a trois nuits, tu as été mordu par les Vampires. Tu rejoins désormais leur camp.",
+        "color": "#FF75FF"
+    },
+    {
+        "nom": "Perte d’Odorat",
+        "description": "Le Renard a perdu son pouvoir. Il ne peut plus utiliser ses capacités.",
+        "color": "#60E98E"
+    },
+    {
+        "nom": "Présence Voisine",
+        "description": "La Chose se trouve parmi tes deux voisins directs.",
+        "color": "#4D6640"
+    },
+    {
+        "nom": "Protection Royale",
+        "description": "Pendant les trois premiers tours, le Prince ne peut pas être éliminé.",
+        "color": "#D6D67A"
+    },
+    {
+        "nom": "Ralliement Forcé",
+        "description": "Attribué à un Loup-Garou lorsqu’il est le dernier de sa meute alors que le Roux-Roux est toujours en vie. Tu changes de meute et dois désormais gagner avec les Roux-Garous.",
+        "color": "#FAA01A"
+    },
+    {
+        "nom": "Réveille",
+        "description": "Attribué au Loup Rêveur lorsqu’il devient le dernier Loup encore en vie. Il acquiert alors la capacité de tuer durant la nuit.",
+        "color": "#980000"
+    },
+    {
+        "nom": "Risée du Village",
+        "description": "Attribué à l’Idiot du Village lorsque son rôle est révélé suite à son élimination par le vote. Il n’est pas éliminé cette fois-ci et reste en vie.",
+        "color": "#3D85C6"
+    },
+    {
+        "nom": "Seconde Souffle",
+        "description": "Asclépios te ramène à la vie. Tu reviens immédiatement en jeu.",
+        "color": "#6D9EEB"
+    },
+    {
+        "nom": "Silence Civique",
+        "description": "Le Bouc Émissaire ou La Grand-Mère Grincheuse t’empêche de voter lors du prochain bûcher.",
+        "color": "#0C343D"
+    },
+    {
+        "nom": "Sous Tutelle",
+        "description": "L’Éducateur t’empêche de te transformer, même si ton modèle meurt. Cet état est automatiquement appliqué à l’Enfant Sauvage tant que l’Éducateur est en vie.",
+        "color": "#58DBDB"
+    },
+    {
+        "nom": "Suffrage Accusateur",
+        "description": "Le Corbeau t’a attribué un vote supplémentaire. Celui-ci est révélé publiquement au début du jour.",
+        "color": "#351C75"
+    },
+    {
+        "nom": "Tétanos",
+        "description": "Tu as été infecté par l’épée du Chevalier Rouillé. Cet état est appliqué au Loup-Garou le plus proche à droite du Chevalier Rouillé. Tu mourras à l’aube suivante.",
+        "color": "#D04601"
+    },
+    {
+        "nom": "Traître",
+        "description": "Tu gagnes désormais la partie avec la Comploteuse. Si la Comploteuse meurt, tu retrouves immédiatement ton camp d’origine.",
+        "color": "#741B47"
+    },
+    {
+        "nom": "Transposition",
+        "description": "La Noiseuse a échangé ton rôle avec celui d’un autre joueur.",
+        "color": "#76A5AF"
     }
 ]

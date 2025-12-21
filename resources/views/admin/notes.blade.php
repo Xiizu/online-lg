@@ -14,7 +14,7 @@
             {{-- Colonne de gauche : Sélection --}}
             <div class="col-md-4 col-lg-3">
                 <div class="card shadow-sm border-0">
-                    <div class="card-header bg-light fw-bold">
+                    <div class="card-header fw-bold">
                         Sélectionner une partie
                     </div>
                     <div class="card-body">
@@ -38,7 +38,7 @@
             {{-- Colonne de droite : Éditeur --}}
             <div class="col-md-8 col-lg-9">
                 <div class="card shadow-sm border-0 h-100">
-                    <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
+                    <div class="card-header d-flex justify-content-between align-items-center py-3">
                         <span class="fw-bold text-primary" id="editorTitle">Aucune partie sélectionnée</span>
                         <div class="btn-group btn-group-sm">
                             <button type="button" class="btn btn-outline-secondary disabled" title="Aperçu (Bientôt disponible)">
@@ -52,7 +52,7 @@
                     <div class="card-body p-0">
                         <div class="position-relative h-100">
                             {{-- Overlay de chargement / attente --}}
-                            <div id="editorOverlay" class="position-absolute top-0 start-0 w-100 h-100 bg-white d-flex align-items-center justify-content-center z-2" style="opacity: 0.8;">
+                            <div id="editorOverlay" class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center z-2" style="opacity: 0.8;">
                                 <div class="text-center text-muted">
                                     <i class="bi bi-arrow-left-circle display-4 mb-3 d-block"></i>
                                     Veuillez sélectionner une partie à gauche<br>pour commencer à écrire.
@@ -69,7 +69,7 @@
                             ></textarea>
                         </div>
                     </div>
-                    <div class="card-footer bg-light text-muted small d-flex justify-content-between">
+                    <div class="card-footer text-muted small d-flex justify-content-between">
                         <span>Format: <strong>Markdown</strong></span>
                         <span id="lastSavedTime">Dernière sauvegarde : Jamais</span>
                     </div>

@@ -13,7 +13,7 @@
         $game = Game::find($game_id);
 
         $token = $player->token ?? '';
-        $qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?data=" . urlencode(url("/player/$token")) . "&size=200x200";
+        $qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?data=" . urlencode(url("/players/$token")) . "&size=200x200";
     @endphp
 
     <div class="container mt-4 align-items-center d-flex flex-column">
@@ -24,10 +24,10 @@
                 <label for="playerName">Entrez le prénom du joueur :</label>
                 <input type="text" id="playerName" class="form-control mb-3" placeholder="Prenom du joueur">
 
-                <p><strong>Lien attribué :</strong> <a href="{{ url('/player/' . $player->token) }}">{{ url('/player/' . $player->token) }}</a></p>
+                <p><strong>Lien attribué :</strong> <a href="{{ url('/players/' . $player->token) }}">{{ url('/players/' . $player->token) }}</a></p>
                 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true"></div>
                 <button class="btn btn-secondary"
-                        onclick="copyToClipboard('{{ url('/player/' . $player->token) }}', 'Lien copié !')">
+                        onclick="copyToClipboard('{{ url('/players/' . $player->token) }}', 'Lien copié !')">
                     Copier le lien
                 </button>
 
