@@ -166,6 +166,31 @@ class AdminController extends Controller
         }
     }
 
+    public function deleteGame($id)
+    {
+        if (!session()->has('authenticated') || !session('authenticated')) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $game = Game::find((int)$id);
+        if (!$game) {
+            return response()->json(['error' => 'Game not found'], 404);
+        }
+
+        // Suppression des joueurs associés
+        Player::where('game_id', $game->id)->delete();
+
+        // Suppression des liages associés
+        Liage::where('first_game_id', $game->id)
+              ->orWhere('second_game_id', $game->id)
+              ->delete();
+
+        // Suppression de la partie
+        $game->delete();
+
+        return response()->json(['success' => 'Game deleted successfully.']);
+    }
+
     public function getPlayerInfo($id)
     {
         if (!session()->has('authenticated') || !session('authenticated')) {

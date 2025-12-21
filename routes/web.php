@@ -19,6 +19,7 @@ Route::get('/admin/games', [AdminController::class, 'indexGame'])->name('admin.g
 Route::get('/admin/games/{id}/start', [AdminController::class, 'startGame'])->name('admin.games.start');
 Route::post('/admin/games/{id}/end', [AdminController::class, 'endGame'])->name('admin.games.end');
 Route::get('/admin/games/{id}', [AdminController::class, 'viewGame'])->name('admin.games.view');
+Route::post('/admin/games/{id}/delete', [AdminController::class, 'deleteGame'])->name('admin.games.delete');
 
 Route::post('/admin/players/{id}',[AdminController::class, 'getPlayerInfo'])->name('admin.players.info');
 Route::post('/admin/players/{id}/update',[AdminController::class, 'updatePlayer'])->name('admin.players.update');

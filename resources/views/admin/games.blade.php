@@ -67,12 +67,10 @@
                                 </a>
                                 @if ($game->status == 'setup')
                                     <button class="btn btn-success btn-sm" id="{{ $game->id }}">Lancer</button>
-                                @endif
-                                @if ($game->status == 'started')
-                                    <button class="btn btn-danger btn-sm" id="{{ $game->id }}">Terminer</button>
-                                @endif
-                                @if ($game->status == 'ended')
-                                    <button class="btn btn-warning btn-sm" disabled>Terminée</button>
+                                @elseif ($game->status == 'started')
+                                    <button class="btn btn-warning btn-sm" id="{{ $game->id }}">Terminer</button>
+                                @elseif ($game->status == 'ended')
+                                    <button class="btn btn-danger btn-sm" id="{{ $game->id }}">Supprimer</button>
                                 @endif
                             </td>
                         </tr>
@@ -101,12 +99,10 @@
                                     </a>
                                     @if ($game->status == 'setup')
                                         <button class="btn btn-success btn-sm" id="{{ $game->id }}">Lancer</button>
-                                    @endif
-                                    @if ($game->status == 'started')
-                                        <button class="btn btn-danger btn-sm" id="{{ $game->id }}">Terminer</button>
-                                    @endif
-                                    @if ($game->status == 'ended')
-                                        <button class="btn btn-warning btn-sm" disabled>Terminée</button>
+                                    @elseif ($game->status == 'started')
+                                        <button class="btn btn-warning btn-sm" id="{{ $game->id }}">Terminer</button>
+                                    @elseif ($game->status == 'ended')
+                                        <button class="btn btn-danger btn-sm" id="{{ $game->id }}">Supprimer</button>
                                     @endif
                                 </td>
                             </tr>
@@ -199,12 +195,22 @@
                 });
             });
 
-            document.querySelectorAll('button.btn-danger.btn-sm[id]').forEach(btn => {
+            document.querySelectorAll('button.btn-warning.btn-sm[id]').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
                     const gameId = parseInt(btn.id, 10);
                     pendingAction = { type: 'end', gameId };
                     modalBody.querySelector('p[name="confirmationMessage"]').textContent = 'Voulez-vous terminer cette partie ?';
+                    bsModal.show();
+                });
+            });
+
+            document.querySelectorAll('button.btn-danger.btn-sm[id]').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const gameId = parseInt(btn.id, 10);
+                    pendingAction = { type: 'delete', gameId };
+                    modalBody.querySelector('p[name="confirmationMessage"]').textContent = 'Voulez-vous supprimer cette partie ? Cette action est irréversible.';
                     bsModal.show();
                 });
             });
@@ -219,6 +225,8 @@
                     startgame(gameId);
                 } else if (type === 'end') {
                     endgame(gameId);
+                } else if (type === 'delete') {
+                    deletegame(gameId);
                 }
             });
 
@@ -250,10 +258,29 @@
 
                     const gameBtn = document.getElementById(gameId);
                     if (gameBtn) {
-                        gameBtn.disabled = true;
                         gameBtn.classList.remove('btn-danger');
                         gameBtn.classList.add('btn-warning');
                         gameBtn.innerText = 'Terminée';
+                    }
+                })
+                .catch(function (error) {
+                    const msg = error.response?.data?.error || 'Une erreur est survenue';
+                    showToast(msg, 'danger');
+                });
+        }
+
+        function deletegame(gameId) {
+            const url = "{{ route('admin.games.delete', ['id' => ':id']) }}".replace(':id', gameId);
+
+            axios.post(url)
+                .then(function (response) {
+                    showToast(response.data.success || 'Partie supprimée avec succès', 'success');
+
+                    // Retirer la ligne du tableau
+                    const gameBtn = document.getElementById(gameId);
+                    if (gameBtn) {
+                        const row = gameBtn.closest('tr');
+                        if (row) row.remove();
                     }
                 })
                 .catch(function (error) {
