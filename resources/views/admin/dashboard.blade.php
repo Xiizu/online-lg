@@ -245,6 +245,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <span class="text-muted me-auto small">Nombre de rôles : <span id="role-count-total">0</span></span>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                     <button type="button" class="btn btn-primary px-4" onclick="createGame()">
                         <i class="bi bi-play-fill"></i> Créer la partie
@@ -311,15 +312,20 @@
         // Gestionnaire des compteurs
         function addOrRemoveOne(roleId, action) {
             const countSpan = document.getElementById(`role-count-${roleId}`);
+            const totalCountSpan = document.getElementById('role-count-total');
+            let totalCount = parseInt(totalCountSpan.textContent);
             let currentCount = parseInt(countSpan.textContent);
 
             if (action === 'increment') {
                 currentCount++;
+                totalCount++;
             } else if (action === 'decrement' && currentCount > 0) {
                 currentCount--;
+                totalCount--;
             }
 
             countSpan.textContent = currentCount;
+            totalCountSpan.textContent = totalCount;
 
             // Feedback visuel optionnel sur la ligne quand sélectionné
             const li = countSpan.closest('li');
