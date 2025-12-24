@@ -37,8 +37,8 @@
     @endphp
     <div class="container py-4">
         <div class="row justify-content-center">
-            <div class="col-lg-10 col-xl-9">
-                <div class="card shadow-lg border-0 overflow-hidden mb-4">
+            <div class="col-lg-10 col-xl-9" style="background-color: #3636365d; border-radius: 15px; padding: 20px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                <div class="card shadow-lg border-0 overflow-hidden mb-4" >
                     <div class="card-header bg-dark text-white py-3">
                         <div class="d-flex justify-content-between align-items-start">
                             <h1 class="h4 mb-2 fw-bold text-uppercase ls-1">
@@ -47,7 +47,7 @@
                             </h1>
                             <div class="d-flex flex-wrap gap-2">
                                 @foreach ($player->etats as $etat)
-                                    <span class="badge rounded-pill text-dark border border-light shadow-sm"
+                                    <span class="badge rounded-pill text-dark border shadow-sm"
                                         style="background-color: {{ $etat->color ?? '#f8f9fa' }}; cursor: pointer;"
                                         data-bs-toggle="modal" data-bs-target="#etatModal{{ $etat->id }}"
                                         title="Voir la description">
@@ -104,7 +104,7 @@
                                 @endif
                             </div>
                             <div class="mt-2">
-                                <div class="card border-0 bg-light shadow-sm">
+                                <div class="card border-0 shadow-sm">
                                     <div class="card-body py-2 px-3">
                                         <small class="text-uppercase text-muted fw-bold" style="font-size: 0.7rem;">Votre
                                             Camp</small>
@@ -124,7 +124,7 @@
                                 </div>
                                 <div class="row g-2">
                                     <div class="col-6">
-                                        <div class="p-2 border rounded bg-light text-center">
+                                        <div class="p-2 border rounded text-center">
                                             <small class="d-block text-muted text-uppercase fw-bold"
                                                 style="font-size: 0.7rem;">Aura</small>
                                             <span class="badge text-dark w-100"
@@ -132,7 +132,7 @@
                                         </div>
                                     </div>
                                     <div class="col-6">
-                                        <div class="p-2 border rounded bg-light text-center">
+                                        <div class="p-2 border rounded text-center">
                                             <small class="d-block text-muted text-uppercase fw-bold"
                                                 style="font-size: 0.7rem;">Apparence</small>
                                             <span class="badge text-dark w-100"
@@ -146,7 +146,7 @@
                                         <h6 class="alert-heading fw-bold mb-0">Informations</h6>
                                     </div>
                                     <p class="mb-0 small text-muted" style="max-height: 100px; overflow-y: auto;">
-                                        {{ $player->comment ?? 'il n\'y à rien pour l\'instant.' }}
+                                        {{ $player->comment ?? 'il n\'y a rien pour l\'instant.' }}
                                     </p>
                                 </div>
 
@@ -170,17 +170,17 @@
                                     </div>
 
                                     <!-- Bloc Description -->
-                                    <div class="bg-light p-3 rounded border">
+                                    <div class="p-3 rounded border">
                                         <!-- En-tête cliquable -->
                                         <div class="d-flex align-items-center justify-content-between"
                                             style="cursor: pointer;" data-bs-toggle="collapse"
                                             data-bs-target="#descContent{{ $player->id }}" aria-expanded="false">
-                                            <h6 class="fw-bold text-muted text-uppercase small mb-0">Description</h6>
-                                            <i class="bi bi-chevron-down small text-muted"></i>
+                                            <h6 class="fw-bold text-uppercase small mb-0">Description</h6>
+                                            <i class="bi bi-chevron-down small"></i>
                                         </div>
                                         <!-- Contenu dépliable -->
                                         <div class="collapse mt-2" id="descContent{{ $player->id }}">
-                                            <p class="mb-0 small text-secondary fst-italic">
+                                            <p class="mb-0 small fst-italic">
                                                 {{ $player->role->description }}
                                             </p>
                                         </div>
@@ -201,5 +201,7 @@
         'gameId' => $player->game->id,
         'currentPlayerId' => $player->id,
     ])
-
+    @include('layouts.messages', [
+        'gameId' => $player->game->id,
+    ])
 @endsection

@@ -3,6 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PlayerController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Broadcast;
+use Illuminate\Auth\GenericUser;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MessageController;
+use App\Models\Player;
+use Illuminate\Support\Facades\Log;
 
 Route::get('/', function () {
     return view('home');
@@ -51,3 +58,9 @@ Route::post('/admin/liages/create', [AdminController::class, 'createLiage'])->na
 Route::post('/admin/notes/{id}/save', [AdminController::class, 'updateNotes'])->name('admin.games.notes.save');
 Route::post('/admin/notes/{id}/get', [AdminController::class, 'getNotes'])->name('admin.games.notes.get');
 Route::get('/admin/notes', [AdminController::class, 'notesIndex'])->name('admin.notes.index');
+
+
+/* Route::post('/broadcasting/auth', [MessageController::class, 'broadcastAuth'])->name('broadcasting.auth'); */
+
+Route::post('/messages/send', [MessageController::class, 'sendMessage'])->name('messages.send');
+Route::post('/messages/history', [MessageController::class, 'getMessageHistory'])->name('messages.history');

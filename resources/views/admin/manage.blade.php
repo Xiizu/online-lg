@@ -494,4 +494,7 @@
     @include('layouts.map', [
         'gameId' => $game->id,
     ])
+    @include('layouts.messages', [
+        'gameId' => $game->id,
+    ])
 @endsection

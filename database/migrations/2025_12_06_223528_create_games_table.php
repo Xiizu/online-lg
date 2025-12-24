@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('status')->default('pending');
             $table->string('name');
             $table->date('date');
-            $table->text('notes')->nullable();
+            $table->longText('notes')->nullable()->after('status');
             $table->timestamps();
         });
     }

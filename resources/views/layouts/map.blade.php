@@ -1,6 +1,6 @@
 {{-- === FLOATING ACTION BUTTON (FAB) === --}}
 <button class="btn btn-primary rounded-circle shadow-lg d-flex align-items-center justify-content-center"
-        style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; z-index: 1050; transition: transform 0.2s;"
+        style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; z-index: 1040; transition: transform 0.2s;"
         data-bs-toggle="modal"
         data-bs-target="#graphModal"
         onmouseover="this.style.transform='scale(1.1)'"

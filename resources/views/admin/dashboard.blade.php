@@ -92,6 +92,24 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Règles du jeu</h5>
+                        <p class="card-text">Afficher les règles du jeu</p>
+                        <a href="{{ route('player.showRules') }}" class="btn btn-primary">Voir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Rôles</h5>
+                        <p class="card-text">Afficher les rôles du jeu</p>
+                        <a href="{{ route('admin.settings.roles.index') }}" class="btn btn-primary">Gérer</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

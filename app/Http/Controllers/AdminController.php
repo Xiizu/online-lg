@@ -506,7 +506,7 @@ class AdminController extends Controller
             'nom'         => 'required|string|max:191',
             'aura'        => 'required|string|max:191',
             'apparence'   => 'required|string|max:191',
-            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:51200',
             'pouvoir'     => 'nullable|string',
             'description' => 'nullable|string',
         ]);
@@ -561,7 +561,7 @@ class AdminController extends Controller
             'apparence'   => 'required|string|max:191',
             'pouvoir'     => 'nullable|string',
             'description' => 'nullable|string',
-            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:51200',
         ]);
 
         $role = new Role();

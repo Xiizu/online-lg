@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="{{ asset('css/immersive.css') }}" rel="stylesheet">
     <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
 </head>
 @php
@@ -58,7 +59,7 @@
                         toggleButton.innerHTML = newTheme === 'dark' ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
                     });
                 </script>
-                <div class="dropdown">
+                <div class="dropstart">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Menu
