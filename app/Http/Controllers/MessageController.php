@@ -21,6 +21,7 @@ class MessageController extends Controller
         $messageText = $request->input('message') ?? $request->input('params.message');
         $typeInput = $request->input('type') ?? $request->input('params.type');
         $reqTargetId = $request->input('target_id') ?? $request->input('params.target_id');
+        $reqGameId = $request->input('game_id') ?? $request->input('params.game_id');
 
         $senderName = 'Système';
         $finalType = 'private';
@@ -30,9 +31,10 @@ class MessageController extends Controller
         if (session('authenticated')) {
             $senderName = 'MJ';
             $finalType = $typeInput;
-
             if ($finalType === 'private') {
                 $targetId = $reqTargetId;
+            } else {
+                $targetId = $reqGameId;
             }
 
         // 2. Logique Joueur
@@ -43,7 +45,8 @@ class MessageController extends Controller
             }
             $senderName = $player->nom;
             $finalType  = 'private';
-            $targetId   = $player->id; // 🔒 ID NUMÉRIQUE UNIQUEMENT
+            $targetId   = $player->id;
+            $gameId     = $player->game_id;
         } else {
             return response()->json(['error' => 'Non autorisé'], 403);
         }
@@ -63,7 +66,7 @@ class MessageController extends Controller
 
         // 4. Diffusion
         if ($finalType === 'public') {
-            GameAnnouncement::dispatch($messageText);
+            GameAnnouncement::dispatch($messageText, $reqGameId);
         } else {
             PrivateMessageSent::dispatch($messageText, $senderName, $targetId);
         }
@@ -76,42 +79,29 @@ class MessageController extends Controller
     {
         $type = $request->input('type') ?? $request->input('params.type');
         $targetId = $request->input('target_id') ?? $request->input('params.target_id');
-
-        // DEBUG
-        error_log("--------------------------------------------------");
-        error_log("GetMessageHistory START | Type: " . ($type ?? 'VIDE') . " | TargetId: " . ($targetId ?? 'VIDE'));
+        $reqGameId = $request->input('game_id') ?? $request->input('params.game_id');
 
         $query = Message::query();
 
         if ($type === 'public') {
             $query->where('type', 'public');
+            if ($reqGameId) {
+                $query->where('target_id', $reqGameId);
+            }
         } else {
             $conversationId = null;
 
             if (session('authenticated')) {
-                // MJ : regarde la conv demandée
                 $conversationId = $targetId;
-                error_log("Auth: MJ détecté");
             } elseif (session()->has('player_token')) {
-                // Joueur : regarde SA conv (basée sur l'ID envoyé par le front, validé par le token en session)
                 $conversationId = $targetId;
-                error_log("Auth: Joueur détecté (TargetID: $conversationId)");
-            } else {
-                error_log("Auth: AUCUNE SESSION TROUVÉE");
             }
-
-            error_log("ConversationID résolu: " . ($conversationId ?? 'NULL'));
-
             if (!$conversationId) {
-                error_log("ERREUR: Aucun ID de conversation, retour vide.");
                 return response()->json([]);
             }
-
             $query->where('type', 'private')
                   ->where('target_id', $conversationId);
         }
-
-        // On prend les 100 derniers messages (trié par date décroissante puis inversé)
         $messages = $query->orderBy('created_at', 'desc')
                           ->take(100)
                           ->get()
@@ -120,28 +110,4 @@ class MessageController extends Controller
 
         return response()->json($messages);
     }
-
-    /* public function broadcastAuth(Request $request)
-    {
-        $user = null;
-        if (session('authenticated')) {
-            $user = new GenericUser(['id' => 0, 'name' => 'MJ', 'role' => 'mj']);
-        }
-        elseif (session()->has('player_token')) {
-            $token = session('player_token');
-            $player = Player::where('token', $token)->first();
-            if ($player) {
-                $user = new GenericUser(['id' => $player->id, 'name' => $player->nom, 'role' => 'player']);
-            } else {
-                abort(403, 'Joueur introuvable -> ' . json_encode($player));
-            }
-        }
-        else {
-            abort(403, 'Accès refusé');
-        }
-        $request->setUserResolver(function () use ($user) {
-            return $user;
-        });
-        return Broadcast::auth($request);
-    } */
 }

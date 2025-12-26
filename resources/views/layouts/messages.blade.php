@@ -155,6 +155,7 @@
     const USER_ID = "{{ $currentUserId }}";
     const USER_ROLE = "{{ session('authenticated') ? 'mj' : 'player' }}";
     const MY_NAME = "{{ $currentUserName }}";
+    const GAME_ID = "{{ $game->id ?? '' }}";
     const ALL_PLAYER_IDS = @json($playerIds);
 
     let currentChannel = 'public';
@@ -162,23 +163,48 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         // Vérifier si Echo (le système de diffusion en temps réel) est chargé
-        if (typeof Echo === 'undefined') {
-            console.error("❌ Laravel Echo n'est pas chargé.");
-            return;
-        }
-        // Vérifier la connexion avec le serveur en websockets
-        // Si la connexion est établie
+        let attempts = 0;
+        const checkEcho = setInterval(() => {
+            if (typeof window.Echo !== 'undefined') {
+                clearInterval(checkEcho);
+                initializeChatSystem();
+            } else {
+                attempts++;
+                if (attempts > 50) {
+                    clearInterval(checkEcho);
+                    console.error("❌ Impossible de charger Laravel Echo. Vérifiez que 'npm run build' est bien lancé.");
+                    document.getElementById('connection-status').innerText = "Erreur JS";
+                    document.getElementById('connection-status').className = "badge bg-danger ms-2";
+                }
+            }
+        }, 100);
+    });
+    function initializeChatSystem() {
+        console.log("✅ Laravel Echo chargé avec succès.");
+
         Echo.connector.pusher.connection.bind('connected', () => {
-            // Afficher un indicateur de connexion réussie
-            console.log('✅ Reverb Connecté !');
+            const statusEl = document.getElementById('connection-status');
+            if(statusEl) {
+                statusEl.innerText = "Connecté";
+                statusEl.className = "badge bg-success ms-2";
+                setTimeout(() => { statusEl.style.display = 'none'; }, 2000);
+            }
+            console.log("✅ Connecté à Reverb.");
         });
+
         // Si la connexion est perdue
         Echo.connector.pusher.connection.bind('unavailable', () => {
-            console.error('❌ Reverb Inaccessible.');
+            const statusEl = document.getElementById('connection-status');
+            if(statusEl) {
+                statusEl.className = 'badge bg-danger ms-2';
+                statusEl.innerText = 'Déconnecté';
+                statusEl.style.display = 'inline-block';
+            }
+            console.error("❌ Déconnecté de Reverb.");
         });
 
         // Ecouter les annonces mj
-        Echo.channel('game-announcements')
+        Echo.channel('game-announcements.' + GAME_ID)
             .listen('GameAnnouncement', (e) => {
                 window.addMessage('public', 'MJ (Annonce)', e.message, true);
                 if (currentChannel !== 'public') window.notifyNewMessage('public');
@@ -223,7 +249,7 @@
                 document.getElementById('global-chat-badge')?.classList.add('d-none');
             });
         }
-    });
+    }
 
     // Sélectionner un canal de discussion
     window.selectChannel = function(channelId, name = null) {
@@ -260,7 +286,8 @@
             // Envoyer la requête AJAX pour récupérer l'historique
             let historyParams = {
                 type: (channelId === 'public') ? 'public' : 'private',
-                target_id: realTargetId
+                target_id: realTargetId,
+                game_id: GAME_ID
             };
             // Requête AJAX avec Axios
             axios.post('{{ route("messages.history") }}', { params: historyParams })
@@ -340,7 +367,8 @@
         let payload = {
             message: message,
             type: msgType,
-            target_id: realTargetId
+            target_id: realTargetId,
+            game_id: GAME_ID
         };
 
         //window.addMessage(currentChannel, 'Moi', message);

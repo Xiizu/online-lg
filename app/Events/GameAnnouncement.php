@@ -13,16 +13,18 @@ class GameAnnouncement implements ShouldBroadcast
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $message;
+    public $gameId;
 
-    public function __construct($message)
+    public function __construct($message, $gameId)
     {
         $this->message = $message;
+        $this->gameId = $gameId;
     }
 
     public function broadcastOn(): array
     {
         return [
-            new Channel('game-announcements'),
+            new Channel('game-announcements.' . $this->gameId),
         ];
     }
 }
