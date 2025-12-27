@@ -140,13 +140,24 @@
                                         </div>
                                     </div>
                                 </div>
+                                {{-- Remettre le bloc d'informations --}}
+                                <div class="alert alert-info shadow-sm mb-0 p-3 rounded border" role="alert">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-info-circle-fill me-2 text-info"></i>
+                                        <h6 class="fw-bold text-muted text-uppercase small mb-0">Informations</h6>
+                                    </div>
+                                    <hr class="my-2">
+                                    <p class="mb-0 small" style="line-height: 1.4;">
+                                        {{ $player->comment ?? 'Il n\'y a pas d\'informations pour le moment.' }}
+                                    </p>
+                                </div>
                                 <div class="d-flex flex-column gap-2">
                                     <!-- Bloc Pouvoir -->
                                     <div class="alert alert-warning shadow-sm mb-0 p-3 rounded border" role="alert">
                                         <!-- En-tête cliquable -->
                                         <div class="d-flex align-items-center justify-content-between"
                                             style="cursor: pointer;" data-bs-toggle="collapse"
-                                            data-bs-target="#powerContent{{ $player->id }}" aria-expanded="true">
+                                            data-bs-target="#powerContent{{ $player->id }}" aria-expanded="false">
                                             <h6 class="fw-bold text-muted text-uppercase small mb-0">Pouvoir</h6>
                                             <i class="bi bi-chevron-down small text-muted"></i>
                                         </div>
@@ -163,7 +174,7 @@
                                         <!-- En-tête cliquable -->
                                         <div class="d-flex align-items-center justify-content-between"
                                             style="cursor: pointer;" data-bs-toggle="collapse"
-                                            data-bs-target="#descContent{{ $player->id }}" aria-expanded="true">
+                                            data-bs-target="#descContent{{ $player->id }}" aria-expanded="false">
                                             <h6 class="fw-bold text-uppercase small mb-0">Description</h6>
                                             <i class="bi bi-chevron-down small"></i>
                                         </div>
