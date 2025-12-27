@@ -15,7 +15,7 @@
                     return '#d0d0d0';
                 case 'humaine':
                     return '#05ff00';
-                case 'loup':
+                case 'bête':
                     return '#ff0000';
                 case 'divine':
                     return '#5ce1e6';
@@ -179,18 +179,18 @@
                                     <div class="col-6">
                                         <label for="modal_aura" class="form-label">Aura</label>
                                         <select class="form-select" id="modal_aura" name="aura">
-                                            <option value="Humaine">Humaine</option>
-                                            <option value="Loup">Loup</option>
-                                            <option value="Divine">Divine</option>
+                                            <option value="Lumineuse">Lumineuse</option>
+                                            <option value="Obscure">Obscure</option>
+                                            <option value="Neutre">Neutre</option>
+                                            <option value="Brouillée">Brouillée</option>
                                         </select>
                                     </div>
                                     <div class="col-6">
                                         <label for="modal_apparence" class="form-label">Apparence</label>
                                         <select class="form-select" id="modal_apparence" name="apparence">
-                                            <option value="Lumineuse">Lumineuse</option>
-                                            <option value="Obscure">Obscure</option>
-                                            <option value="Neutre">Neutre</option>
-                                            <option value="Brouillée">Brouillée</option>
+                                            <option value="Humaine">Humaine</option>
+                                            <option value="Bête">Bête</option>
+                                            <option value="Divine">Divine</option>
                                         </select>
                                     </div>
                                 </div>
@@ -373,7 +373,7 @@
                         return '#d0d0d0';
                     case 'humaine':
                         return '#05ff00';
-                    case 'loup':
+                    case 'bête':
                         return '#ff0000';
                     case 'divine':
                         return '#5ce1e6';
@@ -484,8 +484,15 @@
                     document.getElementById('modal_comment').value = player.comment;
                     document.getElementById('player_page_link').href = '/players/' + player.token;
                     document.getElementById('player_page_link').innerText = '/players/' + player.token;
-                    document.getElementById('modal_aura').value = player.aura;
-                    document.getElementById('modal_apparence').value = player.apparence;
+                    // Champs Sélecteurs Spéciaux : Aura & Apparence
+                    const formatSelectValue = (val) => {
+                        if (!val) return '';
+                        return val.charAt(0).toUpperCase() + val.slice(1).toLowerCase();
+                    };
+
+                    document.getElementById('modal_aura').value = formatSelectValue(player.aura);
+                    document.getElementById('modal_apparence').value = formatSelectValue(player.apparence);
+
 
                     // Gestion Switch Village
                     const vSwitch = document.getElementById('modal_village');

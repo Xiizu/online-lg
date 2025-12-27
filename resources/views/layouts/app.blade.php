@@ -76,7 +76,7 @@
                         @if ($player)
                             <li><a class="dropdown-item" href="{{ route('player.dashboard') }}">Tableau de bord</a></li>
                         @endif
-                        <li><a class="dropdown-item" href="{{ route('admin.settings.roles.index') }}">Liste des Rôles</a>
+                        <li><a class="dropdown-item" href="{{ route('admin.settings.roles.index') }}">Codex</a>
                         </li>
                         <li><a class="dropdown-item" href="{{ route('player.showRules') }}">Règles du Jeu</a></li>
                         <li>

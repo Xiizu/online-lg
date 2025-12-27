@@ -22,7 +22,7 @@
                 case 'humaine':
                     $color = '#05ff00';
                     break;
-                case 'loup':
+                case 'bête':
                     $color = '#ff0000';
                     break;
                 case 'divine':
