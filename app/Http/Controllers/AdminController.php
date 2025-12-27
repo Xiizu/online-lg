@@ -70,12 +70,16 @@ class AdminController extends Controller
                 $count = (int)$count;
                 $role = Role::with('camps')->find($roleId);
                 $defaultCampId = $role?->camps->sortBy('id')->first()?->id;
+                $defaultAura = $role?->aura;
+                $defaultApparence = $role?->apparence;
 
                 for ($i = 0; $i < $count; $i++) {
                     $player = new Player();
                     $player->role_id = $roleId;
                     $player->game_id = $game->id;
                     $player->camp_id = $defaultCampId; // camp par défaut : plus petit id
+                    $player->aura = $defaultAura;
+                    $player->apparence = $defaultApparence;
                     $player->is_alive = true;
                     $player->nom = 'Unknown';
                     $player->token = (string) Str::uuid();
@@ -214,6 +218,8 @@ class AdminController extends Controller
             'comment'  => $player->comment,
             'etats'    => $etats,
             'token'    => $player->token,
+            'aura'     => $player->aura,
+            'apparence'=> $player->apparence,
         ], 200);
     }
 
@@ -240,6 +246,8 @@ class AdminController extends Controller
             'etats'    => 'array', // Peut être vide []
             'etats.*'  => 'integer|exists:etats,id', // On valide que chaque item est un ID d'état existant
             'game_id'  => 'nullable|integer|exists:games,id',
+            'aura'     => 'nullable|string|max:255',
+            'apparence'=> 'nullable|string|max:255',
         ]);
 
         $player->nom = $validated['nom'];
@@ -247,6 +255,8 @@ class AdminController extends Controller
         $player->camp_id = $validated['camp_id'] ?? null;
         $player->is_alive = $validated['is_alive'] ?? false;
         $player->comment = $validated['comment'] ?? '';
+        $player->aura = $validated['aura'] ?? null;
+        $player->apparence = $validated['apparence'] ?? null;
 
         // Déplacement éventuel du joueur vers l'autre partie (mode liage)
         if (array_key_exists('game_id', $validated) && !empty($validated['game_id'])) {

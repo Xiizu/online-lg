@@ -2,37 +2,27 @@
 @section('title', 'Gestion de la Partie')
 @section('body')
     @php
-        function getColor($field)
-            {
-                $field = strtolower($field);
-                switch ($field) {
-                    case 'lumineuse':
-                        $color = '#eeea87';
-                        break;
-                    case 'obscure':
-                        $color = '#c99d9d';
-                        break;
-                    case 'neutre':
-                        $color = '#8a56b7';
-                        break;
-                    case 'brouillée':
-                        $color = '#d0d0d0';
-                        break;
-                    case 'humaine':
-                        $color = '#05ff00';
-                        break;
-                    case 'loup':
-                        $color = '#ff0000';
-                        break;
-                    case 'divine':
-                        $color = '#5ce1e6';
-                        break;
-                    default:
-                        $color = '#8c8c8c';
-                        break;
-                }
-                return $color;
+        $getColor = function ($field) {
+            $field = strtolower($field);
+            switch ($field) {
+                case 'lumineuse':
+                    return '#eeea87';
+                case 'obscure':
+                    return '#c99d9d';
+                case 'neutre':
+                    return '#8a56b7';
+                case 'brouillée':
+                    return '#d0d0d0';
+                case 'humaine':
+                    return '#05ff00';
+                case 'loup':
+                    return '#ff0000';
+                case 'divine':
+                    return '#5ce1e6';
+                default:
+                    return '#8c8c8c';
             }
+        };
     @endphp
     <div class="container mt-4">
         <h1 class="mb-4">Gestion de la Partie: {{ $game->name }}</h1>
@@ -72,10 +62,10 @@
                         </td>
 
                         <td><span class="badge"
-                                style="background-color:{{ getColor($player->role->aura) }}">{{ $player->role->aura }}</span>
+                                style="background-color:{{ $getColor($player->aura) }}">{{ $player->aura }}</span>
                         </td>
                         <td><span class="badge"
-                                style="background-color:{{ getColor($player->role->apparence) }}">{{ $player->role->apparence }}</span>
+                                style="background-color:{{ $getColor($player->apparence) }}">{{ $player->apparence }}</span>
                         </td>
                         <td>
                             @if ($player->is_alive)
@@ -184,6 +174,25 @@
                                             </div>
                                         </div>
                                     @endif
+                                </div>
+                                <div class="col-12 row g-3 d-flex">
+                                    <div class="col-6">
+                                        <label for="modal_aura" class="form-label">Aura</label>
+                                        <select class="form-select" id="modal_aura" name="aura">
+                                            <option value="Humaine">Humaine</option>
+                                            <option value="Loup">Loup</option>
+                                            <option value="Divine">Divine</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="modal_apparence" class="form-label">Apparence</label>
+                                        <select class="form-select" id="modal_apparence" name="apparence">
+                                            <option value="Lumineuse">Lumineuse</option>
+                                            <option value="Obscure">Obscure</option>
+                                            <option value="Neutre">Neutre</option>
+                                            <option value="Brouillée">Brouillée</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="col-12">
                                     <label for="modal_etats" class="form-label">États (Ctrl+Clic pour plusieurs)</label>
@@ -310,6 +319,8 @@
             var etatsSelect = document.getElementById('modal_etats');
             var commentTextarea = document.getElementById('modal_comment');
             var playerIdInput = document.getElementById('modal_player_id');
+            var auraSelect = document.getElementById('modal_aura');
+            var apparenceSelect = document.getElementById('modal_apparence');
 
             // Logique Multi-Village
             var villageSwitch = document.getElementById('modal_village');
@@ -339,13 +350,37 @@
                 camp_id: campInput.value || null,
                 is_alive: isAliveCheckbox.checked,
                 etats: selectedEtats,
-                comment: commentTextarea.value
+                comment: commentTextarea.value,
+                aura: auraSelect.value,
+                apparence: apparenceSelect.value
             };
 
             // Ajout game_id seulement si on est dans une partie liée
             if (targetGameId) {
                 payload.game_id = targetGameId;
             }
+
+            const getColorJS = (field) => {
+                field = (field || '').toLowerCase();
+                switch (field) {
+                    case 'lumineuse':
+                        return '#eeea87';
+                    case 'obscure':
+                        return '#c99d9d';
+                    case 'neutre':
+                        return '#8a56b7';
+                    case 'brouillée':
+                        return '#d0d0d0';
+                    case 'humaine':
+                        return '#05ff00';
+                    case 'loup':
+                        return '#ff0000';
+                    case 'divine':
+                        return '#5ce1e6';
+                    default:
+                        return '#8c8c8c';
+                }
+            };
 
             axios.post('{{ route('admin.players.update', ['id' => '__replace__']) }}'.replace('__replace__',
                     playerIdInput.value), payload)
@@ -365,6 +400,13 @@
                         '<span class="badge" style="background-color: ' + (campsById[campInput.value]?.color ||
                             '#6c757d') + '">' + campInput.options[campInput.selectedIndex].text + '</span>' :
                         '<span class="badge bg-secondary">Non assigné</span>';
+                    playerRow.cells[3].innerHTML =
+                        '<span class="badge" style="background-color: ' + getColorJS(auraSelect.value) + '">' +
+                        auraSelect.value + '</span>';
+                    playerRow.cells[4].innerHTML =
+                        '<span class="badge" style="background-color: ' + getColorJS(apparenceSelect.value) +
+                        '">' +
+                        apparenceSelect.value + '</span>';
                     playerRow.cells[5].innerHTML = isAliveCheckbox.checked ?
                         '<span class="badge bg-success">Vivant</span>' :
                         '<span class="badge bg-danger">Mort</span>';
@@ -410,6 +452,8 @@
             document.getElementById('modal_isAlive').checked = false;
             document.getElementById('modal_comment').value = '';
             document.getElementById('modal_player_id').value = '';
+            document.getElementById('modal_aura').value = 'Humaine';
+            document.getElementById('modal_apparence').value = 'Lumineuse';
 
             const vSwitch = document.getElementById('modal_village');
             if (vSwitch) vSwitch.checked = false;
@@ -440,6 +484,8 @@
                     document.getElementById('modal_comment').value = player.comment;
                     document.getElementById('player_page_link').href = '/players/' + player.token;
                     document.getElementById('player_page_link').innerText = '/players/' + player.token;
+                    document.getElementById('modal_aura').value = player.aura;
+                    document.getElementById('modal_apparence').value = player.apparence;
 
                     // Gestion Switch Village
                     const vSwitch = document.getElementById('modal_village');

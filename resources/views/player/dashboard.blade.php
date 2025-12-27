@@ -128,7 +128,7 @@
                                             <small class="d-block text-muted text-uppercase fw-bold"
                                                 style="font-size: 0.7rem;">Aura</small>
                                             <span class="badge text-dark w-100"
-                                                style="background-color: {{ getColor($player->role->aura) }}">{{ $player->role->aura }}</span>
+                                                style="background-color: {{ getColor($player->aura) }}">{{ $player->aura }}</span>
                                         </div>
                                     </div>
                                     <div class="col-6">
@@ -136,28 +136,17 @@
                                             <small class="d-block text-muted text-uppercase fw-bold"
                                                 style="font-size: 0.7rem;">Apparence</small>
                                             <span class="badge text-dark w-100"
-                                                style="background-color: {{ getColor($player->role->apparence) }}">{{ $player->role->apparence }}</span>
+                                                style="background-color: {{ getColor($player->apparence) }}">{{ $player->apparence }}</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bg-info-subtle p-3 rounded border">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="bi bi-exclamation-circle fs-5 me-2"></i>
-                                        <h6 class="alert-heading fw-bold mb-0">Informations</h6>
-                                    </div>
-                                    <p class="mb-0 small text-muted" style="max-height: 100px; overflow-y: auto;">
-                                        {{ $player->comment ?? 'il n\'y a rien pour l\'instant.' }}
-                                    </p>
-                                </div>
-
                                 <div class="d-flex flex-column gap-2">
-
                                     <!-- Bloc Pouvoir -->
                                     <div class="alert alert-warning shadow-sm mb-0 p-3 rounded border" role="alert">
                                         <!-- En-tête cliquable -->
                                         <div class="d-flex align-items-center justify-content-between"
                                             style="cursor: pointer;" data-bs-toggle="collapse"
-                                            data-bs-target="#powerContent{{ $player->id }}" aria-expanded="false">
+                                            data-bs-target="#powerContent{{ $player->id }}" aria-expanded="true">
                                             <h6 class="fw-bold text-muted text-uppercase small mb-0">Pouvoir</h6>
                                             <i class="bi bi-chevron-down small text-muted"></i>
                                         </div>
@@ -174,7 +163,7 @@
                                         <!-- En-tête cliquable -->
                                         <div class="d-flex align-items-center justify-content-between"
                                             style="cursor: pointer;" data-bs-toggle="collapse"
-                                            data-bs-target="#descContent{{ $player->id }}" aria-expanded="false">
+                                            data-bs-target="#descContent{{ $player->id }}" aria-expanded="true">
                                             <h6 class="fw-bold text-uppercase small mb-0">Description</h6>
                                             <i class="bi bi-chevron-down small"></i>
                                         </div>

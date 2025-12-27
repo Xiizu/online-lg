@@ -184,35 +184,36 @@
             const bsModal = new bootstrap.Modal(modalEl);
 
             let pendingAction = null; // { type: 'start' | 'end', gameId: number }
+            document.addEventListener('click', (e) => {
+                // On cherche si l'élément cliqué (ou son parent) est un bouton avec un ID
+                const btn = e.target.closest('button');
 
-            document.querySelectorAll('button.btn-success.btn-sm[id]').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.preventDefault(); // Empêche comportement par défaut si submit
-                    const gameId = parseInt(btn.id, 10);
+                // Si pas de bouton ou pas d'ID, on ignore
+                if (!btn || !btn.id) return;
+
+                const gameId = parseInt(btn.id, 10);
+
+                // Bouton LANCER (Setup -> Started)
+                if (btn.classList.contains('btn-success') && btn.classList.contains('btn-sm')) {
+                    e.preventDefault();
                     pendingAction = { type: 'start', gameId };
                     modalBody.querySelector('p[name="confirmationMessage"]').textContent = 'Voulez-vous lancer cette partie ?';
                     bsModal.show();
-                });
-            });
-
-            document.querySelectorAll('button.btn-warning.btn-sm[id]').forEach(btn => {
-                btn.addEventListener('click', (e) => {
+                }
+                // Bouton TERMINER (Started -> Ended)
+                else if (btn.classList.contains('btn-warning') && btn.classList.contains('btn-sm')) {
                     e.preventDefault();
-                    const gameId = parseInt(btn.id, 10);
                     pendingAction = { type: 'end', gameId };
                     modalBody.querySelector('p[name="confirmationMessage"]').textContent = 'Voulez-vous terminer cette partie ?';
                     bsModal.show();
-                });
-            });
-
-            document.querySelectorAll('button.btn-danger.btn-sm[id]').forEach(btn => {
-                btn.addEventListener('click', (e) => {
+                }
+                // Bouton SUPPRIMER (Ended -> Delete)
+                else if (btn.classList.contains('btn-danger') && btn.classList.contains('btn-sm')) {
                     e.preventDefault();
-                    const gameId = parseInt(btn.id, 10);
                     pendingAction = { type: 'delete', gameId };
                     modalBody.querySelector('p[name="confirmationMessage"]').textContent = 'Voulez-vous supprimer cette partie ? Cette action est irréversible.';
                     bsModal.show();
-                });
+                }
             });
 
             confirmBtn.addEventListener('click', () => {
@@ -251,17 +252,24 @@
 
         function endgame(gameId) {
             const url = "{{ route('admin.games.end', ['id' => ':id']) }}".replace(':id', gameId);
-
+            const gameBtn = document.getElementById(gameId);
             axios.post(url)
                 .then(function (response) {
                     showToast(response.data.success || 'Partie terminée avec succès', 'success');
+                    // Mettre à jour le bouton dans l'interface
+                    gameBtn.classList.remove('btn-warning');
+                    gameBtn.classList.add('btn-danger');
+                    gameBtn.innerText = 'Supprimer';
 
-                    const gameBtn = document.getElementById(gameId);
-                    if (gameBtn) {
-                        gameBtn.classList.remove('btn-danger');
-                        gameBtn.classList.add('btn-warning');
-                        gameBtn.innerText = 'Terminée';
+                    const row = gameBtn.closest('tr');
+                    if(row) {
+                        const badge = row.querySelector('.badge');
+                        if(badge) {
+                            badge.className = 'badge bg-danger';
+                            badge.innerText = 'ended';
+                        }
                     }
+
                 })
                 .catch(function (error) {
                     const msg = error.response?.data?.error || 'Une erreur est survenue';

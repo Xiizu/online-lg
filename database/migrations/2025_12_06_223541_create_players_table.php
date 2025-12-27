@@ -14,6 +14,8 @@ return new class extends Migration
             $table->boolean('is_alive')->default(true);
             $table->char('token', 36)->unique();
             $table->text('comment')->nullable();
+            $table->string('aura')->nullable();
+            $table->string('apparence')->nullable();
 
             // Relations
             $table->foreignId('camp_id')->nullable()->constrained('camps')->onDelete('set null');
